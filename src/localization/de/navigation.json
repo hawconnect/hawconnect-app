@@ -1,0 +1,96 @@
+{
+	"navigation": {
+		"home": "Home",
+		"dashboardScreen": "Startseite",
+		"loginScreen": "Bei HAWConnect anmelden",
+		"changelog": "Changelog",
+		"eventDetails": "Veranstaltungsdetails",
+		"dashboard": "HAWConnect",
+		"timetable": "Kalender",
+		"map": "Karte",
+		"food": "Essen",
+		"campusMap": "Campuskarte",
+		"settings": "Einstellungen",
+		"preferences": "Einstellungen",
+		"timetableSettings": "Stundenplan-Einstellungen",
+		"flags": "Kennzeichnungen",
+		"flagsSearch": "Suche Kennzeichnungen",
+		"allergensSearch": "Suche Allergene",
+		"allergens": "Allergene",
+		"details": "Details",
+		"profile": "Profil",
+		"about": "Über",
+		"version": "Versionsdetails",
+		"calendar": "Semesterzeiten",
+		"quicklinks": "Quick Links",
+		"organiser": "Veranstalterdetails",
+		"news": "HAW News",
+		"licenses": {
+			"title": "Lizenzen",
+			"search": "Suche Lizenzen"
+		},
+		"license": "Lizenz",
+		"login": "Anmelden",
+		"legal": "Rechtliches",
+		"clEvents": "Campus Life",
+		"hawEvents": "HAW Events",
+		"calendarImport": "Kalender importieren",
+		"clubs": "Clubs",
+		"collapseSidebar": "Seitenleiste einklappen",
+		"expandSidebar": "Seitenleiste ausklappen",
+		"privacy": "Datenschutzerklärung",
+		"imprint": "Impressum",
+		"marketplace": "Marktplatz",
+		"marketplacePost": "Inserat",
+		"marketplaceNew": "Inserat erstellen",
+		"marketplaceEdit": "Inserat bearbeiten",
+		"marketplaceReport": "Nachricht melden",
+		"marketplaceMine": "Meine Inserate",
+		"cafeterias": "Cafés & Mensen"
+	},
+	"cards": {
+		"titles": {
+			"timetable": "Stundenplan",
+			"calendar": "Semesterzeiten",
+			"rooms": "Räume",
+			"news": "HAW News",
+			"events": "Campus Life",
+			"hawEvents": "HAW Events",
+			"mensa": "Mensa",
+			"food": "Essen",
+			"login": "Stundenplan",
+			"links": "Quick Links",
+			"clubs": "Clubs",
+			"marketplace": "Marktplatz"
+		},
+		"announcements": {
+			"readMore": "Mehr erfahren"
+		},
+		"events": {
+			"by": "von {{name}}"
+		},
+		"calendar": {
+			"endsIn": "endet {{time}}"
+		},
+		"timetable": {
+			"ongoing": "endet um {{time}}",
+			"endingSoon_one": "endet in {{count}} min",
+			"endingSoon_other": "endet in {{count}} mins"
+		},
+		"importedClasses": {
+			"ongoing": "Laufende Vorlesung"
+		}
+	},
+	"contextMenu": {
+		"reset": "Karten zurücksetzen",
+		"settings": "Startseite anpassen"
+	},
+	"unmatched": {
+		"title": "Nicht gefunden",
+		"error": {
+			"title": "{{path}} nicht gefunden",
+			"message": "Die angeforderte Seite ist nicht verfügbar.",
+			"button": "Zurück"
+		}
+	}
+}

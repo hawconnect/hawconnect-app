@@ -1,0 +1,199 @@
+{
+	"empty": {
+		"allergens": "No matching allergens found.",
+		"flags": "No matching flags found.",
+		"config": "No allergens set up yet. Tap to configure your allergies to display not binding information about allergens.",
+		"title": "No meals available",
+		"description": "There are no meals available for the selected restaurants or day.",
+		"tip1": "Check if you have selected the right restaurants",
+		"tip2": "Try selecting a different day",
+		"buttonSettings": "Check Settings"
+	},
+	"preferences": {
+		"sections": {
+			"labels": "Labels",
+			"restaurants": "Restaurants"
+		},
+		"formlist": {
+			"allergens": "Allergens",
+			"flags": "Flags",
+			"language": "Food language"
+		},
+		"footer": "We are not responsible for the correctness and accuracy of the data. Please verify the data at the restaurant before consuming. You can also check the data source of each meal in the detail view.",
+		"languages": {
+			"de": "German",
+			"en": "English",
+			"auto": "Default"
+		},
+		"settings": "Settings",
+		"autoShowNextDay": "Automatically switch to next day",
+		"autoShowNextDayTime": "Time"
+	},
+	"price": {
+		"guests": "for guests",
+		"students": "for students",
+		"employees": "for employees"
+	},
+	"details": {
+		"error": {
+			"title": "Details not available",
+			"message": "The details for this meal are currently not available."
+		},
+		"footer": "We are not responsible for the correctness of the data. Please verify the correctness of the data with the respective restaurant before consume anything.",
+		"formlist": {
+			"prices": {
+				"title": "Prices",
+				"student": "Students",
+				"employee": "Staff",
+				"guest": "Guests"
+			},
+			"nutrition": {
+				"title": "Nutrition",
+				"footer": "Values are per meal and may vary.",
+				"energy": "Energy",
+				"fat": "Fat",
+				"saturated": "Saturated Fat",
+				"carbs": "Carbohydrates",
+				"sugar": "Sugar",
+				"fiber": "Fiber",
+				"protein": "Protein",
+				"salt": "Salt"
+			},
+			"about": {
+				"title": "About",
+				"category": "Category",
+				"source": "Data source"
+			},
+			"variants": "Variations",
+			"allergenFooter": "We cannot guarantee the correctness and completeness of the information. ({{allergens}})",
+			"allergenFooterPlain": "We cannot guarantee the correctness and completeness of the information.",
+			"flagsFooter": "Tap on a flag to quickly update your preferences.",
+			"alert": {
+				"allergen": {
+					"title": "Update allergens",
+					"message": {
+						"add": "Do you want to add {{allergen}} to your allergens?",
+						"remove": "Do you want to remove {{allergen}} from your allergens?"
+					}
+				},
+				"flag": {
+					"title": "Update preferences",
+					"message": {
+						"add": "Do you want to add {{flag}} to your preferences?",
+						"remove": "Do you want to remove {{flag}} from your preferences?"
+					}
+				}
+			}
+		},
+		"share": {
+			"message": "Check out \"{{meal}}\" ({{price}}) at {{location}}.\n{{link}}"
+		}
+	},
+	"source": {
+		"official": "Open official menu",
+		"unavailable": "Menu data is currently unavailable. Please use the official menu."
+	},
+	"header": {
+		"general": "General: {{value}}",
+		"distribution": "Food distribution: {{value}}"
+	},
+	"card": {
+		"noAllergenInfo": "No allergen info",
+		"prices": {
+			"student": "Students",
+			"employee": "Staff",
+			"guest": "Guests"
+		}
+	},
+	"filter": {
+		"additives": "Additives",
+		"reset": "Reset",
+		"noMatch": "No meals match your filters",
+		"noLocation": "Choose at least one location",
+		"quickFilters": {
+			"noAlcohol": "Without alcohol",
+			"noPork": "Without pork",
+			"fish": "With fish",
+			"vegetarian": "Vegetarian",
+			"vegan": "Vegan",
+			"favorite": "Favorite"
+		}
+	},
+	"icons": {
+		"vega": "vegan",
+		"vege": "vegetarian",
+		"fish": "fish",
+		"pork": "pork",
+		"beef": "beef",
+		"poul": "poultry",
+		"lamb": "lamb",
+		"game": "game",
+		"alc": "alcohol",
+		"gela": "gelatine",
+		"lact": "no lactose-containing foods",
+		"fave": "Favorite",
+		"new": "new",
+		"vita": "vital"
+	},
+	"iconInfo": {
+		"alc": {
+			"title": "Alcohol",
+			"text": "Dishes that contain alcohol."
+		},
+		"beef": {
+			"title": "Beef",
+			"text": "Dishes containing beef and beef products."
+		},
+		"fave": {
+			"title": "Favorite dish",
+			"text": "Dishes that are offered at your request or are a specialty of the cafeteria chefs."
+		},
+		"fish": {
+			"title": "Contains fish",
+			"text": "Dishes containing seafood, such as fish, crustaceans or shellfish and their products."
+		},
+		"lact": {
+			"title": "Lactose/does not contain foods containing lactose",
+			"text": "Dishes that do not contain lactose-containing foods."
+		},
+		"pork": {
+			"title": "Pork",
+			"text": "Dishes containing pork or pork products."
+		},
+		"poul": {
+			"title": "Poultry",
+			"text": "Dishes containing poultry and poultry products."
+		},
+		"vega": {
+			"title": "Vegan",
+			"text": "These dishes are purely vegetable and do not contain any animal products. Besides the mentioned ingredients for a vegetarian dish, a vegan dish does not contain milk and dairy products (butter, cheese, cream, curd), egg and egg ingredients, honey, beeswax. In addition, no animal excipients have been used to produce the food (e.g. gelatin for clarification)."
+		},
+		"vege": {
+			"title": "Vegetarian",
+			"text": "Ovo-lacto-vegetarian dishes. These dishes do not contain meat, fish (seafood included), other animal products (slaughter fat, meat broth). Dairy products (cheese, yogurt, butter, cream) and eggs or egg ingredients are considered vegetarian."
+		},
+		"vita": {
+			"title": "mensaVital",
+			"text": "Dishes that are prepared in a particularly vitamin-preserving and low-fat way - with natural ingredients without flavor enhancers."
+		}
+	},
+	"iconInfoClose": "Close",
+	"iconInfoHint": "Shows what this icon means",
+	"cafeterias": {
+		"title": "Cafés & mensas",
+		"openNow": "Open now",
+		"closed": "Closed",
+		"offers": "Offers",
+		"address": "Address",
+		"directions": "Directions",
+		"showOnMap": "Show on map",
+		"openingHours": "Opening hours",
+		"distribution": "Food distribution",
+		"todaysMenu": "Today's menu",
+		"moreOn": "More on stwhh.de",
+		"germanOnly": "Only available in German",
+		"unavailable": "Details unavailable",
+		"error": "Cafés and mensas could not be loaded",
+		"open": "Shows opening hours and offers"
+	}
+}

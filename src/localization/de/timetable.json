@@ -1,0 +1,96 @@
+{
+	"details": {
+		"title": "Kursdetails",
+		"weeklySemesterHours": "SWS",
+		"studyGroup": "Lerngruppe",
+		"courseOfStudies": "Studiengang",
+		"error": {
+			"title": "Details nicht verfügbar",
+			"message": "Die Details zu dieser Vorlesung sind nicht verfügbar."
+		}
+	},
+	"time": {
+		"duration": "({{count}} Minuten)"
+	},
+	"error": {
+		"cannotDisplayLecture": "Vorlesung kann nicht angezeigt werden",
+		"filtered": {
+			"title": "Keine Vorlesungen gefunden",
+			"message": "Es scheint keine weiteren Vorlesungen in diesem Semester zu geben."
+		}
+	},
+	"viewModes": {
+		"list": "Liste",
+		"oneDay": "Ein Tag",
+		"threeDays": "Drei Tage",
+		"fiveDays": "Wochentage (Mo-Fr)",
+		"sevenDays": "Vollständige Woche"
+	},
+	"preferences": {
+		"title": "Ansicht",
+		"preview": "Vorschau"
+	},
+	"calendar": {
+		"weekDayShort": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+		"more": "mehr"
+	},
+	"weekdays": {
+		"short": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
+		"single": ["M", "D", "M", "D", "F", "S", "S"],
+		"long": [
+			"Montag",
+			"Dienstag",
+			"Mittwoch",
+			"Donnerstag",
+			"Freitag",
+			"Samstag",
+			"Sonntag"
+		]
+	},
+	"import": {
+		"name": "Kalendername",
+		"link": "Privater Kalenderlink",
+		"file": ".ics-Datei auswählen",
+		"previewRange": "Bis zu 10 Termine aus den letzten 30 und nächsten 180 Tagen.",
+		"confirm": "Import bestätigen",
+		"cancel": "Abbrechen",
+		"refresh": "Kalender aktualisieren",
+		"replace": "Kalender ersetzen",
+		"remove": "Kalender entfernen",
+		"fileRefresh": "Eine aktualisierte Datei importieren, um Änderungen zu laden.",
+		"defaultName": "myHAW-Kalender",
+		"failed": "Import nicht möglich. Datei oder Link prüfen. Links können eine Anmeldung erfordern oder im Browser gesperrt sein; versuche eine .ics-Datei. Vorhandene Kalender bleiben unverändert.",
+		"tooLarge": "Der Kalender überschreitet die Importgrenze von 2 MB.",
+		"storageFailed": "Der private Link konnte nicht sicher gespeichert werden. Es wurde kein Kalender geändert.",
+		"manage": "Kalender importieren / verwalten",
+		"empty": "Noch kein Kalender importiert.",
+		"allDay": "Ganztägig",
+		"unavailable": "Dieser Dienst ist noch nicht mit der HAW Hamburg verbunden.",
+		"addTitle": "Kalender hinzufügen",
+		"yourCalendars": "Deine Kalender",
+		"source": "Importieren aus",
+		"sourceLink": "Link",
+		"sourceFile": ".ics-Datei",
+		"continue": "Weiter",
+		"replaceTitle": "„{{name}}“ ersetzen",
+		"helpLink": "Füge den privaten iCalendar-Link aus myHAW ein. Eine Hochschulanmeldung ist nicht nötig; der Link wird sicher gespeichert.",
+		"helpFile": "Wähle eine .ics-Datei, die du aus myHAW oder einer anderen Kalender-App exportiert hast. Für spätere Änderungen importierst du eine aktualisierte Datei.",
+		"nameLabel": "Name",
+		"namePlaceholder": "z. B. Wintersemester",
+		"linkLabel": "Link",
+		"fileLabel": "Datei",
+		"fileChoose": ".ics-Datei auswählen…",
+		"cancelReplace": "Aktuellen Kalender behalten",
+		"confirmReplace": "Kalender ersetzen",
+		"previewTitle_one": "Vorschau · {{count}} Termin",
+		"previewTitle_other": "Vorschau · {{count}} Termine",
+		"previewEmpty": "Keine Termine in den letzten 30 oder nächsten 180 Tagen.",
+		"untitled": "Termin ohne Titel",
+		"allDayDate": "{{date}} · Ganztägig",
+		"allDayCount": "Ganztägig ({{count}})",
+		"removeConfirm": "Kalender entfernen: {{name}}",
+		"kindLinkUpdated": "Abonnierter Link · Aktualisiert {{date}}",
+		"kindFileUpdated": "Importierte Datei · Aktualisiert {{date}}"
+	},
+	"weekNumber": "KW{{week}}"
+}

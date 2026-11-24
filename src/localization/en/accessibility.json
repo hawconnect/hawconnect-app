@@ -1,0 +1,22 @@
+{
+	"button": {
+		"share": "Share",
+		"close": "Close",
+		"foodPreferences": "Food Preferences",
+		"timetableBack": "Jump to today",
+		"previous": "Previous",
+		"next": "Next"
+	},
+	"map": {
+		"centerOnCurrentLocation": "Center on current location",
+		"floorPicker": "Floor picker",
+		"floorPickerHint": "Swipe up or down to change floor. Double tap to show all floors. Long press to return to ground floor."
+	},
+	"dashboard": {
+		"moveUp": "Move up",
+		"moveDown": "Move down"
+	},
+	"formList": {
+		"copyHint": "Double tap to copy"
+	}
+}

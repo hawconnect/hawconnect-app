@@ -1,0 +1,432 @@
+{
+	"marketplace": {
+		"errors": {
+			"generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+			"signInRequired": "Bitte melde dich an, um den Marktplatz zu nutzen.",
+			"rulesRequired": "Bitte akzeptiere zuerst die Marktplatz-Regeln.",
+			"blocked": "Dein Zugang zum Marktplatz wurde eingeschränkt.",
+			"activePostLimit": "Du hast bereits 5 aktive oder reservierte Inserate. Schließe eines, bevor du dieses wieder öffnest.",
+			"postUnavailable": "Dieses Inserat ist nicht mehr verfügbar.",
+			"renewWindowClosed": "Dieses Inserat kann nicht mehr verlängert werden.",
+			"alreadyReported": "Du hast dies bereits gemeldet.",
+			"contactLimit": "Du hast das Kontaktlimit erreicht. Bitte versuche es später erneut.",
+			"ownPost": "Das ist bei deinem eigenen Inserat nicht möglich.",
+			"mailUnavailable": "Die Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut.",
+			"invalidMarketMessage": "Deine Nachricht ist zu kurz oder zu lang.",
+			"invalidMarketReport": "Die Meldung ist ungültig.",
+			"invalidField": "Bitte überprüfe deine Eingaben.",
+			"marketplaceUnavailable": "Der Marktplatz ist derzeit nicht verfügbar.",
+			"photoLimit": "Zu viele nicht zugeordnete Fotos. Entferne einige oder veröffentliche dein Inserat.",
+			"photoTooLarge": "Dieses Foto ist zu groß.",
+			"invalidPhoto": "Dieses Foto wird nicht unterstützt. Verwende JPEG, PNG oder WebP.",
+			"photoUnavailable": "Foto-Upload ist derzeit nicht verfügbar.",
+			"marketPostExpired": "Dieses Inserat ist abgelaufen. Verlängere es zuerst.",
+			"invalidMarketStatus": "Dieses Inserat kann nicht auf diesen Status gesetzt werden. Ist es abgelaufen, verlängere es stattdessen."
+		},
+		"price": {
+			"free": "Kostenlos",
+			"once": "{{price}} €",
+			"perMonth": "{{price}} € / Monat",
+			"perHour": "{{price}} € / Stunde"
+		},
+		"gate": {
+			"title": "Melde dich an, um fortzufahren.",
+			"note": "Alle können den Marktplatz ansehen. Um Inserate zu erstellen, Kontakt aufzunehmen oder Inserate zu melden, brauchst du ein Konto.",
+			"noteCreate": "Um ein Inserat zu erstellen, brauchst du ein Konto.",
+			"signIn": "Anmelden"
+		},
+		"poster": {
+			"own": "Dein Inserat"
+		},
+		"type": {
+			"offer": "Angebot",
+			"request": "Gesuch"
+		},
+		"filter": {
+			"type": "Art",
+			"all": "Alle",
+			"offers": "Angebote",
+			"requests": "Gesuche",
+			"category": "Kategorie",
+			"allCategories": "Alle Kategorien",
+			"types": {
+				"jobs": {
+					"offer": "Jobangebote",
+					"request": "Jobsuchende"
+				},
+				"housing": {
+					"offer": "Angebote",
+					"request": "Gesuche"
+				}
+			}
+		},
+		"category": {
+			"housing": "Unterkunft",
+			"jobs": "Jobs"
+		},
+		"list": {
+			"newPost": "Inserat erstellen",
+			"myPosts": "Meine Inserate",
+			"empty": "Noch keine Inserate.",
+			"emptyFiltered": "Keine Inserate passen zu diesen Filtern.",
+			"loadFailed": "Inserate konnten nicht geladen werden.",
+			"retry": "Erneut versuchen",
+			"loadFailedWithReason": "Inserate konnten nicht geladen werden. {{reason}}"
+		},
+		"status": {
+			"active": "Aktiv",
+			"expired": "Abgelaufen",
+			"removedByOwner": "Gelöscht",
+			"removedByModerator": "Von der Moderation entfernt",
+			"hiddenPendingReview": "Ausgeblendet bis zur Prüfung",
+			"hiddenByBlock": "Ausgeblendet",
+			"reserved": "Reserviert",
+			"closed": "Geschlossen",
+			"closedHousingOffer": "Vermietet",
+			"closedJobsOffer": "Stelle besetzt"
+		},
+		"detail": {
+			"unavailable": "Dieses Inserat ist nicht mehr verfügbar.",
+			"details": "Details",
+			"posted": "Erstellt am {{date}}",
+			"expires": "Läuft ab am {{date}}",
+			"expired": "Abgelaufen am {{date}}",
+			"photo": "Foto {{index}} von {{count}}",
+			"contact": "Kontakt aufnehmen",
+			"report": "Melden",
+			"edit": "Bearbeiten",
+			"renew": "Um 30 Tage verlängern",
+			"renewed": "Verlängert bis {{date}}.",
+			"delete": "Löschen",
+			"deleteTitle": "Inserat löschen?",
+			"deleteMessage": "Dein Inserat verschwindet sofort. Das kann nicht rückgängig gemacht werden.",
+			"cancel": "Abbrechen",
+			"manage": "Inserat verwalten",
+			"editFooter": "Inserate können nur bearbeitet werden, solange sie aktiv oder reserviert sind. Bearbeiten ändert das Ablaufdatum nicht.",
+			"contactSignIn": "Anmelden, um Kontakt aufzunehmen",
+			"apply": "Jetzt bewerben",
+			"applyBy": "Bewerbung bis",
+			"deadlineDaysLeft_one": "{{date}} · schließt in {{count}} Tag",
+			"deadlineDaysLeft_other": "{{date}} · schließt in {{count}} Tagen",
+			"deadlineToday": "{{date}} · schließt heute",
+			"deadlineClosed": "{{date}} · Bewerbungsschluss vorbei",
+			"applyFailed": "Die Bewerbung konnte nicht geöffnet werden. Bewerbung an: {{address}}",
+			"contactHeader": "Kontakt",
+			"priceLabel": {
+				"housing": {
+					"offer": "Monatsmiete",
+					"request": "Maximale Monatsmiete"
+				},
+				"jobs": {
+					"offer": "Gehalt",
+					"request": "Gehaltsvorstellung"
+				}
+			},
+			"lapsed": "Abgelaufen – erstelle ein neues Inserat, um es erneut zu veröffentlichen.",
+			"status": {
+				"reserve": "Als reserviert markieren",
+				"activate": "Wieder verfügbar",
+				"closeHousing": "Als vermietet markieren",
+				"closeJobs": "Als besetzt markieren",
+				"close": "Inserat schließen",
+				"reopen": "Inserat wieder öffnen"
+			},
+			"closeTitle": "Inserat schließen?",
+			"closeMessage": "Es ist für andere nicht mehr sichtbar. Du kannst es wieder öffnen, solange es nicht abgelaufen ist."
+		},
+		"mine": {
+			"empty": "Du hast noch keine Inserate erstellt.",
+			"footer": "Inserate sind 30 Tage aktiv. Du kannst ein Inserat verlängern, solange es aktiv oder reserviert ist oder bis zu 30 Tage nach Ablauf. Höchstens 5 Inserate können gleichzeitig aktiv oder reserviert sein.",
+			"groups": {
+				"active": "Aktiv",
+				"reserved": "Reserviert",
+				"closed": "Geschlossen",
+				"expired": "Abgelaufen",
+				"hidden": "Ausgeblendet"
+			}
+		},
+		"form": {
+			"newTitle": "Inserat erstellen",
+			"editTitle": "Inserat bearbeiten",
+			"category": "Kategorie",
+			"titleLabel": "Titel",
+			"titlePlaceholder": "Was bietest oder suchst du?",
+			"description": "Beschreibung",
+			"descriptionPlaceholder": "Beschreibe es ehrlich. Nur Klartext.",
+			"descriptionFooter": "Dein Name und deine E-Mail werden nie angezeigt. Gib keine personenbezogenen Daten anderer an.",
+			"pricePlaceholder": "Optional",
+			"dateClear": "Datum entfernen",
+			"photos": "Fotos",
+			"photosFooter": "Bis zu 3 Fotos, JPEG, PNG oder WebP, max. 5 MB pro Foto. Standortdaten werden entfernt.",
+			"addPhoto": "Foto hinzufügen",
+			"removePhoto": "Foto {{index}} entfernen",
+			"replacePhotos": "Fotos ersetzen",
+			"replaceFooter": "Neue Fotos ersetzen beim Speichern die bisherigen.",
+			"uploading": "Wird hochgeladen …",
+			"uploadFailed": "Hochladen fehlgeschlagen",
+			"publish": "Inserat veröffentlichen",
+			"save": "Änderungen speichern",
+			"photoPermission": "Erlaube in den Einstellungen den Zugriff auf deine Fotos, um Fotos hinzuzufügen.",
+			"waitForUploads": "Bitte warte, bis alle Fotos hochgeladen sind.",
+			"invalid": {
+				"title": "Der Titel braucht 3 bis 80 Zeichen.",
+				"description": "Die Beschreibung braucht 10 bis 2.000 Zeichen.",
+				"price": "Gib einen ganzen Eurobetrag von 0 bis 100.000 ein.",
+				"location": "Gib den Ort an (höchstens 60 Zeichen).",
+				"availableFrom": "Wähle ein gültiges Datum.",
+				"url": "Gib einen gültigen https-Link ein.",
+				"email": "Gib eine gültige E-Mail-Adresse ein.",
+				"number": "Gib eine ganze Zahl von {{min}} bis {{max}} ein.",
+				"choose": "Wähle eine Option für „{{field}}“.",
+				"text": "Fülle „{{field}}“ aus (höchstens {{max}} Zeichen).",
+				"date": "Wähle ein gültiges Datum für „{{field}}“.",
+				"employer": "Gib den Namen des Arbeitgebers an (höchstens 80 Zeichen).",
+				"applyUrl": "Gib einen gültigen https-Link für Bewerbungen ein.",
+				"applyEmail": "Gib eine gültige E-Mail-Adresse für Bewerbungen ein.",
+				"tooLong": "Der Text für „{{field}}“ darf höchstens {{max}} Zeichen haben."
+			},
+			"listingSection": "Inserat",
+			"typeQuestion": "Was möchtest du tun?",
+			"aboutMe": "Über mich",
+			"urlHint": "Links müssen mit https:// beginnen.",
+			"emailNote": "Diese E-Mail-Adresse wird öffentlich in deinem Inserat angezeigt.",
+			"priceLabel": {
+				"housing": {
+					"offer": "Monatsmiete (€)",
+					"request": "Maximale Monatsmiete (€)"
+				},
+				"jobs": {
+					"offer": "Gehalt",
+					"request": "Gehaltsvorstellung"
+				}
+			},
+			"locationLabel": {
+				"housing": "Stadtteil",
+				"jobs": "Arbeitsort"
+			},
+			"locationHint": {
+				"housing": "Nicht deine Straße: nur der Stadtteil.",
+				"jobs": "Stadt oder Stadtteil, in dem gearbeitet wird."
+			},
+			"availableFrom": {
+				"jobs": {
+					"offer": "Startdatum",
+					"request": "Verfügbar ab"
+				},
+				"housing": "Einzugsdatum"
+			},
+			"field": {
+				"employer": "Arbeitgeber",
+				"jobType": "Art der Stelle",
+				"workMode": "Arbeitsmodell",
+				"languages": "Sprachen",
+				"weeklyHours": "Wochenstunden",
+				"requirements": "Anforderungen",
+				"applyMethod": "Bewerbung per",
+				"applyUrl": "Bewerbungslink",
+				"applyEmail": "Bewerbungs-E-Mail",
+				"applyDeadline": "Bewerbungsfrist",
+				"skills": "Fähigkeiten",
+				"portfolioUrl": "Portfolio-Link",
+				"housingType": "Art der Unterkunft",
+				"rentalDuration": "Mietdauer",
+				"deposit": "Kaution (€)",
+				"rentIncludes": "Miete enthält",
+				"sizeSqm": "Größe (m²)",
+				"rooms": "Zimmer",
+				"furnished": "Möbliert",
+				"facilities": "Ausstattung",
+				"occupation": "Tätigkeit",
+				"contactName": "Ansprechperson",
+				"contactRole": "Funktion",
+				"contactEmail": "Kontakt-E-Mail",
+				"companyWebsite": "Website des Unternehmens"
+			},
+			"option": {
+				"jobType": {
+					"fullTime": "Vollzeit",
+					"partTime": "Teilzeit",
+					"workingStudent": "Werkstudent",
+					"internship": "Praktikum",
+					"minijob": "Minijob",
+					"temporary": "Befristet"
+				},
+				"workMode": {
+					"onSite": "Vor Ort",
+					"hybrid": "Hybrid",
+					"remote": "Remote",
+					"flexible": "Flexibel"
+				},
+				"languages": {
+					"english": "Englisch",
+					"german": "Deutsch",
+					"other": "Andere"
+				},
+				"applyMethod": {
+					"url": "Link",
+					"email": "E-Mail"
+				},
+				"housingType": {
+					"sharedFlatRoom": "Zimmer in einer WG",
+					"privateRoom": "Privatzimmer",
+					"studio": "Studio",
+					"apartment": "Wohnung"
+				},
+				"rentalDuration": {
+					"short": "Kurzfristig",
+					"medium": "Mittelfristig",
+					"long": "Langfristig",
+					"flexible": "Flexibel"
+				},
+				"rentIncludes": {
+					"electricity": "Strom",
+					"heating": "Heizung",
+					"internet": "Internet",
+					"utilities": "Nebenkosten"
+				},
+				"furnished": {
+					"yes": "Ja",
+					"no": "Nein",
+					"partly": "Teilweise",
+					"preferred": "Bevorzugt",
+					"notNeeded": "Nicht nötig",
+					"any": "Egal"
+				},
+				"facilities": {
+					"washingMachine": "Waschmaschine",
+					"kitchen": "Küche",
+					"privateBathroom": "Eigenes Bad",
+					"balcony": "Balkon",
+					"elevator": "Aufzug",
+					"wifi": "WLAN"
+				},
+				"occupation": {
+					"student": "Student:in",
+					"professional": "Berufstätig",
+					"intern": "Praktikant:in",
+					"other": "Sonstiges"
+				}
+			},
+			"choose": "Auswählen…",
+			"placeholder": {
+				"employer": "z. B. Muster GmbH",
+				"weeklyHours": "z. B. 20",
+				"requirements": "Was Bewerbende mitbringen sollten",
+				"applyUrl": "https://…",
+				"applyEmail": "name@firma.de",
+				"skills": "Was du kannst",
+				"portfolioUrl": "https://…",
+				"deposit": "z. B. 900",
+				"sizeSqm": "z. B. 18",
+				"rooms": "z. B. 2",
+				"jobType": "Art der Stelle auswählen",
+				"housingType": "Art der Unterkunft auswählen",
+				"applyDeadline": "Frist auswählen",
+				"contactName": "Anna Schmidt",
+				"contactRole": "HR",
+				"contactEmail": "jobs@company.de",
+				"companyWebsite": "https://company.de"
+			},
+			"locationPlaceholder": {
+				"housing": "z. B. Hamburg-Barmbek",
+				"jobs": "z. B. Hamburg-Altona"
+			},
+			"pricePlaceholderRequired": "z. B. 550",
+			"requiredNote": "Mit * markierte Felder sind Pflichtfelder.",
+			"sections": {
+				"basic": "Grundlagen",
+				"employment": "Beschäftigung",
+				"jobDescription": "Stellenbeschreibung",
+				"application": "Bewerbung",
+				"lookingFor": "Was du suchst",
+				"aboutYou": "Über dich",
+				"rent": "Miete und Verfügbarkeit",
+				"place": "Die Unterkunft",
+				"descriptionPhotos": "Beschreibung und Fotos"
+			},
+			"datePlaceholder": {
+				"jobs": "Startdatum auswählen",
+				"housing": "Einzugsdatum auswählen"
+			},
+			"priceUnit": "Gehaltszeitraum",
+			"priceUnitOption": {
+				"perHour": "pro Stunde",
+				"perMonth": "pro Monat"
+			},
+			"publicNote": "Wird öffentlich in deinem Inserat angezeigt."
+		},
+		"rules": {
+			"title": "Marktplatz-Regeln",
+			"intro": "Bitte akzeptiere vor deinem ersten Inserat diese Regeln:",
+			"illegal": "Keine illegalen Inhalte.",
+			"agents": "Keine gewerblichen Makler:innen oder Vermittler:innen.",
+			"discrimination": "Keine Diskriminierung.",
+			"honest": "Beschreibe alles ehrlich.",
+			"personalData": "Teile keine personenbezogenen Daten anderer.",
+			"note": "Inserate, die gegen diese Regeln verstoßen, können gemeldet und entfernt werden.",
+			"accept": "Akzeptieren und fortfahren",
+			"cancel": "Abbrechen"
+		},
+		"contact": {
+			"title": "Kontakt aufnehmen",
+			"intro": "Deine Nachricht wird per E-Mail an die Person geschickt, die das Inserat erstellt hat. Antworten gehen an die E-Mail-Adresse deines Kontos.",
+			"addressShared": "Die Person, die das Inserat erstellt hat, sieht die E-Mail-Adresse deines Kontos.",
+			"placeholder": "Deine Nachricht",
+			"counter": "{{count}} / {{max}}",
+			"tooShort": "Schreibe mindestens {{min}} Zeichen.",
+			"send": "Senden",
+			"cancel": "Abbrechen",
+			"success": "Nachricht gesendet.",
+			"mailUnavailable": "Kontakt ist vorübergehend nicht möglich."
+		},
+		"report": {
+			"title": "Inserat melden",
+			"intro": "Warum meldest du dieses Inserat?",
+			"reason": "Grund",
+			"reasons": {
+				"scam": "Betrug",
+				"illegal": "Illegale Inhalte",
+				"offensive": "Beleidigend",
+				"discrimination": "Diskriminierung",
+				"spam": "Spam",
+				"other": "Sonstiges"
+			},
+			"note": "Hinweis (optional)",
+			"notePlaceholder": "Was sollte die Moderation wissen?",
+			"send": "Meldung senden",
+			"success": "Danke. Die Moderation prüft dieses Inserat.",
+			"messageTitle": "Diese Nachricht melden",
+			"messageIntro": "Warum meldest du diese Nachricht?",
+			"messageSuccess": "Danke. Die Moderation prüft diese Nachricht.",
+			"linkExpired": "Dieser Link ist abgelaufen."
+		},
+		"notOfficial": "Der Marktplatz wird von Studierenden betrieben. Er ist kein offizielles Angebot der HAW Hamburg.",
+		"typeChoice": {
+			"jobs": {
+				"offer": {
+					"title": "Job anbieten",
+					"subtitle": "Ich suche Mitarbeitende"
+				},
+				"request": {
+					"title": "Job gesucht",
+					"subtitle": "Ich suche Arbeit"
+				}
+			},
+			"housing": {
+				"offer": {
+					"title": "Unterkunft anbieten",
+					"subtitle": "Ich vermiete ein Zimmer oder eine Wohnung"
+				},
+				"request": {
+					"title": "Unterkunft gesucht",
+					"subtitle": "Ich suche eine Bleibe"
+				}
+			}
+		},
+		"unit": {
+			"sizeSqm": "{{value}} m²",
+			"weeklyHours": "{{value}} Std./Woche",
+			"deposit": "{{value}} €"
+		}
+	}
+}

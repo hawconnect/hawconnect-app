@@ -1,0 +1,11 @@
+{
+	"login": {
+		"title1": "Sign in",
+		"title1Sub": "By students for students",
+		"subtitles": {
+			"timetable": "to view your timetable",
+			"food": "to find your next meal",
+			"sync": "to sync your calendars"
+		}
+	}
+}

@@ -1,0 +1,129 @@
+{
+	"menu": {
+		"guest": {
+			"title": "Anmelden"
+		},
+		"formlist": {
+			"preferences": {
+				"title": "App-Einstellungen",
+				"dashboard": "Startseite",
+				"food": "Essen",
+				"language": "Sprache",
+				"timetable": "Stundenplan"
+			},
+			"appearance": {
+				"title": "Darstellung",
+				"appearance": "Design",
+				"accent": "Akzentfarbe",
+				"font": "Schriftart"
+			},
+			"language": {
+				"title": "Sprache wechseln",
+				"message": "Bestätige, um die Sprache der App auf Englisch zu ändern.",
+				"confirm": "Bestätigen"
+			},
+			"legal": {
+				"title": "App",
+				"about": "Über",
+				"feedback": "Feedback senden",
+				"feedbackSubject": "HAWConnect-Feedback",
+				"feedbackNoMail": "Keine E-Mail-App gefunden. Schreib an {{email}}.",
+				"share": "Teile die App",
+				"shareMessage": "HAWConnect {{url}}",
+				"shareMessageAndroid": "HAWConnect {{url}}",
+				"download": "App herunterladen"
+			}
+		}
+	},
+	"about": {
+		"header": {
+			"developed": "Gepflegt von",
+			"version": "Version {{version}}"
+		},
+		"formlist": {
+			"app": {
+				"title": "App"
+			},
+			"legal": {
+				"title": "Rechtliches",
+				"button": "Rechtliche Infos"
+			},
+			"systemStatus": "Systemstatus"
+		},
+		"projectTitle": "Von Studierenden für Studierende",
+		"description": "HAWConnect ist eine studentisch gepflegte Open-Source-Campus-App für die HAW Hamburg. Hier findest du deinen importierten Stundenplan, Hamburger Mensapläne, Campus-Karten, Semesterzeiten, Veranstaltungen, studentische Projekte und hilfreiche Hochschullinks.",
+		"independence": "Ein unabhängiges studentisches Projekt. HAWConnect ist kein offiziell unterstütztes Angebot der HAW Hamburg.",
+		"maintainers": "Studierende der HAW Hamburg"
+	},
+	"legal": {
+		"formlist": {
+			"legal": {
+				"privacy": "Datenschutzerklärung",
+				"imprint": "Impressum",
+				"terms": "Nutzungsbedingungen"
+			}
+		},
+		"loadFailed": "Dieses Dokument konnte nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+		"notPublished": "Dieses Dokument wurde noch nicht veröffentlicht.",
+		"openDocument": "Veröffentlichtes Dokument öffnen"
+	},
+	"licenses": {
+		"footer": "Diese Bibliotheken wurden zur Erstellung dieser App verwendet. Einige sind plattformspezifisch und sind daher in deinem Build nicht enthalten.",
+		"fields": {
+			"name": "Name",
+			"version": "Version",
+			"repository": "Repository"
+		}
+	},
+	"profile": {
+		"logout": {
+			"alert": {
+				"cancel": "Abbrechen"
+			}
+		}
+	},
+	"theme": {
+		"themes": {
+			"default": "System",
+			"light": "Hell",
+			"dark": "Dunkel"
+		},
+		"accent": {
+			"default": "Standard",
+			"blue": "Blau",
+			"cyan": "Cyan",
+			"green": "Grün",
+			"lime": "Limette",
+			"yellow": "Gelb",
+			"orange": "Orange",
+			"pink": "Pink",
+			"magenta": "Magenta",
+			"black": "Schwarz",
+			"white": "Weiß"
+		},
+		"fonts": {
+			"default": "Standard",
+			"system": "System"
+		}
+	},
+	"dashboard": {
+		"shown": "Alle Karten",
+		"noShown": "Dashboard ist leer",
+		"noShownButton": "Konfigurieren",
+		"noShownDescription": "Füge Karten zu deinem Dashboard hinzu, um loszulegen.",
+		"reset": "Reihenfolge zurücksetzen",
+		"footer": "Passe dein Dashboard an, indem du die Karten per Drag & Drop in die gewünschte Reihenfolge ziehst.",
+		"serviceStatus": {
+			"title": "Eingeschränkte Verfügbarkeit",
+			"messageOne": "{{service}} ist aktuell nicht verfügbar.",
+			"messageMany": "{{services}} sind aktuell nicht verfügbar.",
+			"link": "Systemstatus anzeigen",
+			"dismiss": "Statusbanner schließen",
+			"services": {
+				"campusLife": "Campus Life",
+				"map": "Campus-Karte",
+				"backend": "HAWConnect-API"
+			}
+		}
+	}
+}

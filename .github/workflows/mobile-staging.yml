@@ -1,0 +1,63 @@
+name: Mobile staging builds
+
+# Builds "HAWConnect Beta" (APP_VARIANT=staging, dev.hawconnect.app.beta) for
+# iOS and Android on EAS whenever dev changes. Builds run on EAS cloud
+# workers, so no macOS runner is needed here. Nothing is built until the
+# EXPO_TOKEN secret exists; nothing is submitted to TestFlight / Play internal
+# testing unless the repository variable STAGING_AUTO_SUBMIT is "true".
+# See docs/mobile-builds.md.
+
+on:
+  push:
+    branches: [dev]
+    paths-ignore:
+      - 'docs/**'
+      - '**/*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mobile-staging-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  eas-staging:
+    name: EAS staging build (iOS + Android)
+    runs-on: ubuntu-latest
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - name: Check EAS configuration
+        id: eas
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "::notice::EXPO_TOKEN is not configured; skipping staging builds. See docs/mobile-builds.md."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.eas.outputs.enabled == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - if: steps.eas.outputs.enabled == 'true'
+        uses: ./.github/actions/setup
+
+      - if: steps.eas.outputs.enabled == 'true'
+        uses: ./.github/actions/setup-eas
+        with:
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Start EAS staging builds
+        if: steps.eas.outputs.enabled == 'true'
+        env:
+          AUTO_SUBMIT: ${{ vars.STAGING_AUTO_SUBMIT }}
+        run: |
+          submit_flags=()
+          if [ "$AUTO_SUBMIT" = "true" ]; then
+            submit_flags=(--auto-submit-with-profile=staging)
+          fi
+          eas build --profile staging --platform all --non-interactive --no-wait "${submit_flags[@]}"

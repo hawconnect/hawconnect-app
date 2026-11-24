@@ -1,0 +1,11 @@
+{
+	"login": {
+		"title1": "Anmelden",
+		"title1Sub": "Von Studierenden für Studierende",
+		"subtitles": {
+			"timetable": "für deinen Stundenplan",
+			"food": "für den Mensaplan",
+			"sync": "um deine Kalender zu synchronisieren"
+		}
+	}
+}

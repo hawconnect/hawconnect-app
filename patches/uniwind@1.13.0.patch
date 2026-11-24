@@ -1,0 +1,141 @@
+diff --git a/src/components/native/Text.tsx b/src/components/native/Text.tsx
+index 5d375a6d79dbe8b1fe4b6950f042a1bdbc5b03b8..4cadaa3916cc8ef9880a5de69db9e8d6d08ac792 100644
+--- a/src/components/native/Text.tsx
++++ b/src/components/native/Text.tsx
+@@ -1,9 +1,10 @@
+-import { useState } from 'react'
++import { useContext, useState } from 'react'
+ import type { TextProps } from 'react-native'
+ import { Text as RNText } from 'react-native'
+ import type { ComponentState } from '../../core/types'
+ import { copyComponentProperties } from '../utils'
+ import { useAccentColor } from './useAccentColor'
++import { NestedTextContext, useSystemFont, withOutfit } from './outfit'
+ import { useStyle } from './useStyle'
+ 
+ type StyleWithWebkitLineClamp = {
+@@ -11,6 +12,8 @@ type StyleWithWebkitLineClamp = {
+ }
+ 
+ export const Text = copyComponentProperties(RNText, (props: TextProps) => {
++    const nested = useContext(NestedTextContext)
++    const systemFont = useSystemFont()
+     const [isPressed, setIsPressed] = useState(false)
+     const state = {
+         isPressed,
+@@ -20,9 +23,10 @@ export const Text = copyComponentProperties(RNText, (props: TextProps) => {
+     const selectionColor = useAccentColor(props.selectionColorClassName, props, state)
+ 
+     return (
++        <NestedTextContext.Provider value>
+         <RNText
+             {...props}
+-            style={[style, props.style]}
++            style={withOutfit([style, props.style], nested, systemFont)}
+             selectionColor={props.selectionColor ?? selectionColor}
+             numberOfLines={(style as StyleWithWebkitLineClamp).WebkitLineClamp ?? props.numberOfLines}
+             onPressIn={event => {
+@@ -34,6 +38,7 @@ export const Text = copyComponentProperties(RNText, (props: TextProps) => {
+                 props.onPressOut?.(event)
+             }}
+         />
++        </NestedTextContext.Provider>
+     )
+ })
+ 
+diff --git a/src/components/native/TextInput.tsx b/src/components/native/TextInput.tsx
+index 61fd0599f4ebbc8ad3bf84a222bc6c9e6f9c85f4..e612512d1002b30b318551eec60d63f426f545d0 100644
+--- a/src/components/native/TextInput.tsx
++++ b/src/components/native/TextInput.tsx
+@@ -4,9 +4,11 @@ import { TextInput as RNTextInput } from 'react-native'
+ import type { ComponentState } from '../../core/types'
+ import { copyComponentProperties } from '../utils'
+ import { useAccentColor } from './useAccentColor'
++import { useSystemFont, withOutfit } from './outfit'
+ import { useStyle } from './useStyle'
+ 
+ export const TextInput = copyComponentProperties(RNTextInput, (props: TextInputProps) => {
++    const systemFont = useSystemFont()
+     const [isFocused, setIsFocused] = useState(false)
+     const [isPressed, setIsPressed] = useState(false)
+     const state = {
+@@ -24,7 +26,7 @@ export const TextInput = copyComponentProperties(RNTextInput, (props: TextInputP
+     return (
+         <RNTextInput
+             {...props}
+-            style={[style, props.style]}
++            style={withOutfit([style, props.style], false, systemFont)}
+             cursorColor={props.cursorColor ?? cursorColor}
+             selectionColor={props.selectionColor ?? selectionColor}
+             placeholderTextColor={props.placeholderTextColor ?? placeholderTextColor}
+diff --git a/src/components/native/outfit.ts b/src/components/native/outfit.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..69ce36d09d62f5adbec08fa86b9435da4f3b458d
+--- /dev/null
++++ b/src/components/native/outfit.ts
+@@ -0,0 +1,65 @@
++import { createContext, useSyncExternalStore } from 'react'
++import type { StyleProp, TextStyle } from 'react-native'
++import { StyleSheet } from 'react-native'
++
++// HAWConnect: React Native needs one fontFamily per weight for bundled fonts, so Text
++// and TextInput default to Outfit-Regular and map fontWeight (from className or style)
++// to the matching Outfit face. Styles with their own non-Outfit fontFamily are untouched.
++const outfitFace = (weight: TextStyle['fontWeight']) => {
++    const value = weight === undefined || weight === 'normal' ? 400 : weight === 'bold' ? 700 : Number(weight)
++    if (value >= 700) return 'Outfit-Bold'
++    if (value >= 600) return 'Outfit-SemiBold'
++    if (value >= 500) return 'Outfit-Medium'
++
++    return 'Outfit-Regular'
++}
++
++// HAWConnect "Interface font" setting, shared with the app through a global symbol
++// (src/utils/interface-font.ts): 'default' uses Outfit, 'system' the platform font.
++type InterfaceFontStore = { mode: 'default' | 'system'; listeners: Set<() => void> }
++const STORE_KEY = Symbol.for('hawconnect.interfaceFont')
++const globalStore = globalThis as unknown as Record<symbol, InterfaceFontStore | undefined>
++const fontStore = (): InterfaceFontStore => {
++    globalStore[STORE_KEY] ??= { mode: 'default', listeners: new Set() }
++
++    return globalStore[STORE_KEY]
++}
++const subscribe = (listener: () => void) => {
++    fontStore().listeners.add(listener)
++
++    return () => {
++        fontStore().listeners.delete(listener)
++    }
++}
++
++/** True while the app's Interface font setting is 'system'. */
++export const useSystemFont = () => useSyncExternalStore(subscribe, () => fontStore().mode === 'system')
++
++// True inside a patched Text: a nested Text without its own weight or family inherits the parent's face.
++export const NestedTextContext = createContext(false)
++
++export const withOutfit = (style: StyleProp<TextStyle>, nested = false, system = false): StyleProp<TextStyle> => {
++    const flat = StyleSheet.flatten(style) ?? {}
++
++    if (system) {
++        if (flat.fontFamily?.startsWith('Outfit')) {
++            const { fontFamily: _outfit, ...rest } = flat
++
++            return rest
++        }
++
++        return style
++    }
++
++    if (nested && flat.fontFamily === undefined && flat.fontWeight === undefined) {
++        return style
++    }
++
++    if (flat.fontFamily !== undefined && !flat.fontFamily.startsWith('Outfit')) {
++        return style
++    }
++
++    const { fontWeight, ...rest } = flat
++
++    return { ...rest, fontFamily: outfitFace(fontWeight) }
++}

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HAWConnect//Calendar//EN
+URL:https://example.test/calendar.ics?calendar-secret
+BEGIN:VTODO
+UID:todo-secret
+URL:https://example.test/task.ics?task-secret
+SUMMARY:Task
+END:VTODO
+BEGIN:VEVENT
+UID:event-safe
+DTSTART:20261019T090000Z
+DTEND:20261019T100000Z
+SUMMARY:Safe event
+END:VEVENT
+END:VCALENDAR

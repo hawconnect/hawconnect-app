@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import "uniwind";
+
+@font-face {
+	font-family: "Outfit";
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Outfit";
+	font-weight: 500;
+	font-display: swap;
+	src: url("/fonts/Outfit-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Outfit";
+	font-weight: 600;
+	font-display: swap;
+	src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Outfit";
+	font-weight: 700;
+	font-display: swap;
+	src: url("/fonts/Outfit-Bold.ttf") format("truetype");
+}
+
+@theme {
+	--font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+	--spacing-page: 12px;
+	--spacing-card: 16px;
+	--spacing-bottom-safe: 90px;
+	--spacing-modal-bottom: 32px;
+	--spacing-row: 5px;
+	--spacing-section: 30px;
+	--spacing-copy-button-min: 165px;
+
+	--radius-xs: 3px;
+	--radius-base: 5px;
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-mg: 12px;
+	--radius-lg: 12px;
+	--radius-ios: 12px;
+	--radius-infinite: 9999px;
+}
+
+/* react-native-web sets a system `font` shorthand on every Text/TextInput;
+   unlayered so it wins over RNW's layer. Native uses Outfit-* faces via the
+   uniwind Text/TextInput patch (patches/uniwind@1.13.0.patch). */
+[class*="css-text-"],
+[class*="css-textinput-"],
+input,
+textarea,
+button {
+	font-family: var(--font-sans);
+}
+
+@layer theme {
+	:root {
+		@variant light {
+			--color-background: #f7f6f8;
+			--color-text: #211438;
+			--color-typography: #211438;
+			--color-card: #ffffff;
+			--color-card-sheet: #ffffff;
+			--color-card-button: #f8f7fb;
+			--color-card-contrast: #efedf3;
+			--color-border: rgba(0, 0, 0, 0.08);
+			--color-primary: #40296c;
+			--color-secondary: #3d0b44;
+			--color-primary-background: #40296c15;
+			--color-on-primary: #ffffff;
+			--color-label: #646b78;
+			--color-label-secondary: #646b78;
+			--color-label-tertiary: #6c6776;
+			--color-label-background: #f3f0f9;
+			--color-tabbar-inactive: #646b78;
+			--color-success: #15803d;
+			--color-community-green: #24ff88;
+			--color-community-green-accent: #0a9a52;
+			--color-warning: #b45309;
+			--color-notification: #b91c1c;
+			--color-input-background: #f6f4fa;
+			--color-input-border: #767180;
+			--color-contrast: #ffffff;
+			--color-sheet-button: #ffffff;
+			--color-veg-green: #18b91e;
+			--color-date-picker-background: #f6f4fa;
+			--color-plate-outer: #edebeb;
+			--color-plate-outer-border: #d0d0d0;
+			--color-plate-rim: #f5f5f5;
+			--color-plate-rim-border: #d1d1d1;
+			--color-plate-inner: #eaeaea;
+			--color-plate-inner-border: #cccccc;
+			--color-plate-shadow: #444444;
+			--color-plate-inner-shadow: #777777;
+			--color-calendar-item: #5d5d5d;
+			--color-completed-dot: #157a15;
+			--color-soon-dot: #dfdfdf;
+			--color-white: #f2f0ef;
+		}
+
+		@variant dark {
+			--color-background: #141019;
+			--color-text: #f4f1f9;
+			--color-typography: #f4f1f9;
+			--color-card: #1d1726;
+			--color-card-sheet: #1d1726;
+			--color-card-button: #2a2336;
+			--color-card-contrast: #322a3f;
+			--color-border: rgba(255, 255, 255, 0.08);
+			--color-primary: #ac97d3;
+			--color-secondary: #cbbfe4;
+			--color-primary-background: #ac97d325;
+			--color-on-primary: #211438;
+			--color-label: #a39cb0;
+			--color-label-secondary: #a39cb0;
+			--color-label-tertiary: #9a91a6;
+			--color-label-background: #2d2539;
+			--color-tabbar-inactive: #a39cb0;
+			--color-success: #4ade80;
+			--color-community-green: #24ff88;
+			--color-community-green-accent: #24ff88;
+			--color-warning: #d97706;
+			--color-notification: #f87171;
+			--color-input-background: #2a2336;
+			--color-input-border: #8a8196;
+			--color-contrast: #141019;
+			--color-sheet-button: #2a2234;
+			--color-veg-green: #1ccd22;
+			--color-date-picker-background: #2a2336;
+			--color-plate-outer: #2a2a2b;
+			--color-plate-outer-border: #303032;
+			--color-plate-rim: #373739;
+			--color-plate-rim-border: #444448;
+			--color-plate-inner: #262626;
+			--color-plate-inner-border: #474749;
+			--color-plate-shadow: #777777;
+			--color-plate-inner-shadow: #3d3d3d;
+			--color-calendar-item: #676767;
+			--color-completed-dot: #157a15;
+			--color-soon-dot: #4b4b4b;
+			--color-white: #f2f0ef;
+		}
+
+		@variant ios {
+			@variant dark {
+				--color-card-sheet: #17121f;
+			}
+		}
+	}
+}
+
+/* Spec: cards and controls use a real 1px border, not a device hairline. */
+@utility border-hairline {
+	border-width: 1px;
+}
+
+/* Spec card shadow: 0 1px 2px rgba(0,0,0,0.04). */
+@utility shadow-card {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+@utility border-b-hairline {
+	border-bottom-width: hairlineWidth();
+}
+
+@utility border-r-hairline {
+	border-right-width: hairlineWidth();
+}
+
+@utility h-hairline {
+	height: hairlineWidth();
+}

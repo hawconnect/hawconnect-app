@@ -1,0 +1,129 @@
+{
+	"menu": {
+		"guest": {
+			"title": "Sign in"
+		},
+		"formlist": {
+			"preferences": {
+				"title": "App settings",
+				"dashboard": "Home screen",
+				"food": "Food",
+				"language": "Language",
+				"timetable": "Timetable"
+			},
+			"appearance": {
+				"title": "Appearance",
+				"appearance": "Theme",
+				"accent": "Accent color",
+				"font": "Interface font"
+			},
+			"language": {
+				"title": "Change language",
+				"message": "Confirm to change the app language to German.",
+				"confirm": "Confirm"
+			},
+			"legal": {
+				"title": "App",
+				"about": "About",
+				"feedback": "Send feedback",
+				"feedbackSubject": "HAWConnect feedback",
+				"feedbackNoMail": "No email app found. Write to {{email}}.",
+				"share": "Share the app",
+				"shareMessage": "HAWConnect {{url}}",
+				"shareMessageAndroid": "HAWConnect {{url}}",
+				"download": "Download the app"
+			}
+		}
+	},
+	"about": {
+		"header": {
+			"developed": "Maintained by",
+			"version": "Version {{version}}"
+		},
+		"formlist": {
+			"app": {
+				"title": "App"
+			},
+			"legal": {
+				"title": "Legal",
+				"button": "Legal Information"
+			},
+			"systemStatus": "System Status"
+		},
+		"projectTitle": "Students, for students",
+		"description": "HAWConnect is an open-source campus app for HAW Hamburg, maintained by students. Find your imported timetable, Hamburg cafeteria menus, campus maps, semester dates, events, clubs and useful university links in one place.",
+		"independence": "An independent student project. HAWConnect is not officially endorsed by HAW Hamburg.",
+		"maintainers": "HAW Hamburg students"
+	},
+	"legal": {
+		"formlist": {
+			"legal": {
+				"privacy": "Privacy Policy",
+				"imprint": "Imprint",
+				"terms": "Terms of Service"
+			}
+		},
+		"loadFailed": "This document could not be loaded. Check your connection and try again.",
+		"notPublished": "This document has not been published yet.",
+		"openDocument": "Open published document"
+	},
+	"licenses": {
+		"footer": "These libraries were used to create this app. Some are platform-specific and therefore may not be included in your build.",
+		"fields": {
+			"name": "Name",
+			"version": "Version",
+			"repository": "Repository"
+		}
+	},
+	"profile": {
+		"logout": {
+			"alert": {
+				"cancel": "Cancel"
+			}
+		}
+	},
+	"theme": {
+		"themes": {
+			"default": "System",
+			"light": "Light",
+			"dark": "Dark"
+		},
+		"accent": {
+			"default": "Default",
+			"blue": "Blue",
+			"cyan": "Cyan",
+			"green": "Green",
+			"lime": "Lime",
+			"yellow": "Yellow",
+			"orange": "Orange",
+			"pink": "Pink",
+			"magenta": "Magenta",
+			"black": "Black",
+			"white": "White"
+		},
+		"fonts": {
+			"default": "Default",
+			"system": "System"
+		}
+	},
+	"dashboard": {
+		"shown": "All cards",
+		"reset": "Reset order",
+		"noShown": "Dashboard is empty",
+		"noShownDescription": "Add some cards to your dashboard to get started.",
+		"noShownButton": "Configure",
+		"footer": "Customize your dashboard by dragging and dropping the cards to your preferred order.",
+		"serviceStatus": {
+			"title": "Limited availability",
+			"messageOne": "{{service}} is currently unavailable.",
+			"messageMany": "{{services}} are currently unavailable.",
+			"link": "View system status",
+			"dismiss": "Dismiss status banner",
+			"services": {
+				"campusLife": "Campus Life",
+				"map": "Campus Map",
+				"backend": "HAWConnect API"
+			}
+		}
+	}
+}

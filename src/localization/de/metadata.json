@@ -1,0 +1,11 @@
+{
+	"ios": {
+		"CFBundleDisplayName": "HAWConnect",
+		"NSFaceIDUsageDescription": "Erlaube HAWConnect die Verwendung von Face ID.",
+		"NSLocationWhenInUseUsageDescription": "Erlaube HAWConnect den Zugriff auf deinen Standort, um deine Position auf der Karte anzuzeigen.",
+		"NSPhotoLibraryUsageDescription": "Erlaube HAWConnect den Zugriff auf deine Fotos, um sie deinen Marktplatz-Inseraten hinzuzufügen."
+	},
+	"android": {
+		"app_name": "HAWConnect"
+	}
+}

@@ -1,0 +1,432 @@
+{
+	"marketplace": {
+		"errors": {
+			"generic": "Something went wrong. Please try again.",
+			"signInRequired": "Please sign in to use the marketplace.",
+			"rulesRequired": "Please accept the marketplace rules first.",
+			"blocked": "Your marketplace access has been restricted.",
+			"activePostLimit": "You already have 5 active or reserved listings. Close one before reopening this one.",
+			"postUnavailable": "This listing is no longer available.",
+			"renewWindowClosed": "This listing can no longer be renewed.",
+			"alreadyReported": "You have already reported this.",
+			"contactLimit": "You have reached the contact limit. Please try again later.",
+			"ownPost": "You cannot do this with your own listing.",
+			"mailUnavailable": "The message could not be sent. Please try again later.",
+			"invalidMarketMessage": "Your message is too short or too long.",
+			"invalidMarketReport": "The report is invalid.",
+			"invalidField": "Please check your entries.",
+			"marketplaceUnavailable": "The marketplace is currently unavailable.",
+			"photoLimit": "Too many unattached photos. Remove some or publish your listing.",
+			"photoTooLarge": "This photo is too large.",
+			"invalidPhoto": "This photo is not supported. Use JPEG, PNG or WebP.",
+			"photoUnavailable": "Photo upload is currently unavailable.",
+			"marketPostExpired": "This listing has expired. Renew it first.",
+			"invalidMarketStatus": "This listing cannot be changed to that status. If it has expired, renew it instead."
+		},
+		"price": {
+			"free": "Free",
+			"once": "{{price}} €",
+			"perMonth": "{{price}} € / month",
+			"perHour": "{{price}} € / hour"
+		},
+		"gate": {
+			"title": "Sign in to continue.",
+			"note": "Anyone can browse the marketplace. To create a listing, contact someone or report a listing, you need an account.",
+			"noteCreate": "To create a listing, you need an account.",
+			"signIn": "Sign in"
+		},
+		"poster": {
+			"own": "Your listing"
+		},
+		"type": {
+			"offer": "Offer",
+			"request": "Request"
+		},
+		"filter": {
+			"type": "Type",
+			"all": "All",
+			"offers": "Offers",
+			"requests": "Requests",
+			"category": "Category",
+			"allCategories": "All categories",
+			"types": {
+				"jobs": {
+					"offer": "Job offers",
+					"request": "Job seekers"
+				},
+				"housing": {
+					"offer": "Offers",
+					"request": "Looking for"
+				}
+			}
+		},
+		"category": {
+			"housing": "Accommodation",
+			"jobs": "Jobs"
+		},
+		"list": {
+			"newPost": "Create listing",
+			"myPosts": "My listings",
+			"empty": "No listings yet.",
+			"emptyFiltered": "No listings match these filters.",
+			"loadFailed": "Listings could not be loaded.",
+			"retry": "Try again",
+			"loadFailedWithReason": "Listings could not be loaded. {{reason}}"
+		},
+		"status": {
+			"active": "Active",
+			"expired": "Expired",
+			"removedByOwner": "Deleted",
+			"removedByModerator": "Removed by moderators",
+			"hiddenPendingReview": "Hidden pending review",
+			"hiddenByBlock": "Hidden",
+			"reserved": "Reserved",
+			"closed": "Closed",
+			"closedHousingOffer": "Rented",
+			"closedJobsOffer": "Position filled"
+		},
+		"detail": {
+			"unavailable": "This listing is no longer available.",
+			"details": "Details",
+			"posted": "Posted {{date}}",
+			"expires": "Expires {{date}}",
+			"expired": "Expired {{date}}",
+			"photo": "Photo {{index}} of {{count}}",
+			"contact": "Contact",
+			"report": "Report",
+			"edit": "Edit",
+			"renew": "Renew for 30 days",
+			"renewed": "Renewed until {{date}}.",
+			"delete": "Delete",
+			"deleteTitle": "Delete listing?",
+			"deleteMessage": "Your listing will disappear immediately. This cannot be undone.",
+			"cancel": "Cancel",
+			"manage": "Manage your listing",
+			"editFooter": "Listings can only be edited while active or reserved. Editing does not change the expiry date.",
+			"contactSignIn": "Sign in to contact",
+			"apply": "Apply Now",
+			"applyBy": "Apply by",
+			"deadlineDaysLeft_one": "{{date}} · closes in {{count}} day",
+			"deadlineDaysLeft_other": "{{date}} · closes in {{count}} days",
+			"deadlineToday": "{{date}} · closes today",
+			"deadlineClosed": "{{date}} · Applications closed",
+			"applyFailed": "Could not open the application. Apply at: {{address}}",
+			"contactHeader": "Contact",
+			"priceLabel": {
+				"housing": {
+					"offer": "Monthly rent",
+					"request": "Maximum monthly rent"
+				},
+				"jobs": {
+					"offer": "Salary",
+					"request": "Expected salary"
+				}
+			},
+			"lapsed": "Expired — create a new listing to post it again.",
+			"status": {
+				"reserve": "Mark as reserved",
+				"activate": "Mark as available again",
+				"closeHousing": "Mark as rented",
+				"closeJobs": "Mark as filled",
+				"close": "Close listing",
+				"reopen": "Reopen listing"
+			},
+			"closeTitle": "Close this listing?",
+			"closeMessage": "It will no longer be visible to others. You can reopen it later while it has not expired."
+		},
+		"mine": {
+			"empty": "You have not created any listings yet.",
+			"footer": "Listings are active for 30 days. You can renew a listing while it is active or reserved, or up to 30 days after it expires. At most 5 listings can be active or reserved at once.",
+			"groups": {
+				"active": "Active",
+				"reserved": "Reserved",
+				"closed": "Closed",
+				"expired": "Expired",
+				"hidden": "Hidden"
+			}
+		},
+		"form": {
+			"newTitle": "Create listing",
+			"editTitle": "Edit listing",
+			"category": "Category",
+			"titleLabel": "Title",
+			"titlePlaceholder": "What are you offering or looking for?",
+			"description": "Description",
+			"descriptionPlaceholder": "Describe it honestly. Plain text only.",
+			"descriptionFooter": "Your name and email are never shown. Never include other people's personal data.",
+			"pricePlaceholder": "Optional",
+			"dateClear": "Clear date",
+			"photos": "Photos",
+			"photosFooter": "Up to 3 photos, JPEG, PNG or WebP, max. 5 MB each. Location data is removed.",
+			"addPhoto": "Add photo",
+			"removePhoto": "Remove photo {{index}}",
+			"replacePhotos": "Replace photos",
+			"replaceFooter": "New photos replace the current ones when you save.",
+			"uploading": "Uploading…",
+			"uploadFailed": "Upload failed",
+			"publish": "Publish listing",
+			"save": "Save changes",
+			"photoPermission": "Allow access to your photos in Settings to add photos.",
+			"waitForUploads": "Please wait until all photos are uploaded.",
+			"invalid": {
+				"title": "The title needs 3 to 80 characters.",
+				"description": "The description needs 10 to 2,000 characters.",
+				"price": "Enter a whole number of euros from 0 to 100,000.",
+				"location": "Enter the location (up to 60 characters).",
+				"availableFrom": "Choose a valid date.",
+				"url": "Enter a valid https link.",
+				"email": "Enter a valid email address.",
+				"number": "Enter a whole number from {{min}} to {{max}}.",
+				"choose": "Choose an option for \"{{field}}\".",
+				"text": "Fill in \"{{field}}\" (at most {{max}} characters).",
+				"date": "Choose a valid date for \"{{field}}\".",
+				"employer": "Enter the employer's name (at most 80 characters).",
+				"applyUrl": "Enter a valid https link for applications.",
+				"applyEmail": "Enter a valid email address for applications.",
+				"tooLong": "The text for \"{{field}}\" can have at most {{max}} characters."
+			},
+			"listingSection": "Listing",
+			"typeQuestion": "What would you like to do?",
+			"aboutMe": "About me",
+			"urlHint": "Links must start with https://.",
+			"emailNote": "This email address is shown publicly on your listing.",
+			"priceLabel": {
+				"housing": {
+					"offer": "Monthly rent (€)",
+					"request": "Maximum monthly rent (€)"
+				},
+				"jobs": {
+					"offer": "Salary",
+					"request": "Expected salary"
+				}
+			},
+			"locationLabel": {
+				"housing": "Neighbourhood",
+				"jobs": "Work location"
+			},
+			"locationHint": {
+				"housing": "Not your street address: only the neighbourhood.",
+				"jobs": "City or district where the work takes place."
+			},
+			"availableFrom": {
+				"jobs": {
+					"offer": "Start date",
+					"request": "Available from"
+				},
+				"housing": "Move-in date"
+			},
+			"field": {
+				"employer": "Employer",
+				"jobType": "Job type",
+				"workMode": "Work mode",
+				"languages": "Languages",
+				"weeklyHours": "Hours per week",
+				"requirements": "Requirements",
+				"applyMethod": "How to apply",
+				"applyUrl": "Application link",
+				"applyEmail": "Application email",
+				"applyDeadline": "Application deadline",
+				"skills": "Skills",
+				"portfolioUrl": "Portfolio link",
+				"housingType": "Type of place",
+				"rentalDuration": "Rental period",
+				"deposit": "Deposit (€)",
+				"rentIncludes": "Rent includes",
+				"sizeSqm": "Size (m²)",
+				"rooms": "Rooms",
+				"furnished": "Furnished",
+				"facilities": "Facilities",
+				"occupation": "Occupation",
+				"contactName": "Contact person",
+				"contactRole": "Contact role",
+				"contactEmail": "Contact email",
+				"companyWebsite": "Company website"
+			},
+			"option": {
+				"jobType": {
+					"fullTime": "Full-time",
+					"partTime": "Part-time",
+					"workingStudent": "Working student",
+					"internship": "Internship",
+					"minijob": "Minijob",
+					"temporary": "Temporary"
+				},
+				"workMode": {
+					"onSite": "On site",
+					"hybrid": "Hybrid",
+					"remote": "Remote",
+					"flexible": "Flexible"
+				},
+				"languages": {
+					"english": "English",
+					"german": "German",
+					"other": "Other"
+				},
+				"applyMethod": {
+					"url": "Link",
+					"email": "Email"
+				},
+				"housingType": {
+					"sharedFlatRoom": "Room in a shared flat",
+					"privateRoom": "Private room",
+					"studio": "Studio",
+					"apartment": "Apartment"
+				},
+				"rentalDuration": {
+					"short": "Short term",
+					"medium": "Medium term",
+					"long": "Long term",
+					"flexible": "Flexible"
+				},
+				"rentIncludes": {
+					"electricity": "Electricity",
+					"heating": "Heating",
+					"internet": "Internet",
+					"utilities": "Utilities"
+				},
+				"furnished": {
+					"yes": "Yes",
+					"no": "No",
+					"partly": "Partly",
+					"preferred": "Preferred",
+					"notNeeded": "Not needed",
+					"any": "Any"
+				},
+				"facilities": {
+					"washingMachine": "Washing machine",
+					"kitchen": "Kitchen",
+					"privateBathroom": "Private bathroom",
+					"balcony": "Balcony",
+					"elevator": "Elevator",
+					"wifi": "Wi-Fi"
+				},
+				"occupation": {
+					"student": "Student",
+					"professional": "Professional",
+					"intern": "Intern",
+					"other": "Other"
+				}
+			},
+			"choose": "Choose…",
+			"placeholder": {
+				"employer": "e.g. Acme GmbH",
+				"weeklyHours": "e.g. 20",
+				"requirements": "What applicants should bring",
+				"applyUrl": "https://…",
+				"applyEmail": "name@company.de",
+				"skills": "What you can do",
+				"portfolioUrl": "https://…",
+				"deposit": "e.g. 900",
+				"sizeSqm": "e.g. 18",
+				"rooms": "e.g. 2",
+				"jobType": "Select job type",
+				"housingType": "Select type of place",
+				"applyDeadline": "Select deadline",
+				"contactName": "Anna Schmidt",
+				"contactRole": "HR",
+				"contactEmail": "jobs@company.de",
+				"companyWebsite": "https://company.de"
+			},
+			"locationPlaceholder": {
+				"housing": "e.g. Hamburg-Barmbek",
+				"jobs": "e.g. Hamburg-Altona"
+			},
+			"pricePlaceholderRequired": "e.g. 550",
+			"requiredNote": "Fields marked with * are required.",
+			"sections": {
+				"basic": "Basic information",
+				"employment": "Employment details",
+				"jobDescription": "Job description",
+				"application": "Application details",
+				"lookingFor": "What you're looking for",
+				"aboutYou": "About you",
+				"rent": "Rent and availability",
+				"place": "The place",
+				"descriptionPhotos": "Description and photos"
+			},
+			"datePlaceholder": {
+				"jobs": "Select start date",
+				"housing": "Select move-in date"
+			},
+			"priceUnit": "Salary period",
+			"priceUnitOption": {
+				"perHour": "per hour",
+				"perMonth": "per month"
+			},
+			"publicNote": "Shown publicly on your listing."
+		},
+		"rules": {
+			"title": "Marketplace rules",
+			"intro": "Before your first listing, please accept these rules:",
+			"illegal": "No illegal content.",
+			"agents": "No commercial agents or brokers.",
+			"discrimination": "No discrimination.",
+			"honest": "Describe things honestly.",
+			"personalData": "Never share other people's personal data.",
+			"note": "Listings that break these rules can be reported and removed.",
+			"accept": "Accept and continue",
+			"cancel": "Cancel"
+		},
+		"contact": {
+			"title": "Contact",
+			"intro": "Your message is emailed to the poster. Replies go to your account email address.",
+			"addressShared": "The poster will see your account email address.",
+			"placeholder": "Your message",
+			"counter": "{{count}} / {{max}}",
+			"tooShort": "Write at least {{min}} characters.",
+			"send": "Send",
+			"cancel": "Cancel",
+			"success": "Message sent.",
+			"mailUnavailable": "Contact is temporarily unavailable."
+		},
+		"report": {
+			"title": "Report listing",
+			"intro": "Why are you reporting this listing?",
+			"reason": "Reason",
+			"reasons": {
+				"scam": "Scam or fraud",
+				"illegal": "Illegal content",
+				"offensive": "Offensive",
+				"discrimination": "Discrimination",
+				"spam": "Spam",
+				"other": "Other"
+			},
+			"note": "Note (optional)",
+			"notePlaceholder": "Anything moderators should know",
+			"send": "Send report",
+			"success": "Thank you. Moderators will review this listing.",
+			"messageTitle": "Report this message",
+			"messageIntro": "Why are you reporting this message?",
+			"messageSuccess": "Thank you. Moderators will review this message.",
+			"linkExpired": "This link has expired."
+		},
+		"notOfficial": "The marketplace is run by students. It is not an official HAW Hamburg service.",
+		"typeChoice": {
+			"jobs": {
+				"offer": {
+					"title": "Offer a job",
+					"subtitle": "I'm hiring"
+				},
+				"request": {
+					"title": "Looking for a job",
+					"subtitle": "I'm looking for work"
+				}
+			},
+			"housing": {
+				"offer": {
+					"title": "Offer accommodation",
+					"subtitle": "I have a room or flat to rent out"
+				},
+				"request": {
+					"title": "Looking for accommodation",
+					"subtitle": "I'm looking for a place to live"
+				}
+			}
+		},
+		"unit": {
+			"sizeSqm": "{{value}} m²",
+			"weeklyHours": "{{value}} h/week",
+			"deposit": "{{value}} €"
+		}
+	}
+}

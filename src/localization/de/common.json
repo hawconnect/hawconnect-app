@@ -1,0 +1,312 @@
+{
+	"toast": {
+		"clipboard": "in Zwischenablage kopiert",
+		"roomNotFound": "Raum nicht gefunden"
+	},
+	"showMore": "Mehr anzeigen",
+	"showLess": "Weniger anzeigen",
+	"error": {
+		"title": "Ein Fehler ist aufgetreten",
+		"description": "Beim Laden der Daten ist ein Fehler aufgetreten.",
+		"button": "Wiederholen",
+		"pull": "Zum Aktualisieren nach unten ziehen",
+		"noEvents": "Keine anstehenden Veranstaltungen",
+		"eventNotFound": "Veranstaltung nicht gefunden",
+		"eventNotFoundDescription": "Die gesuchte Veranstaltung existiert nicht oder wurde entfernt.",
+		"backToEventList": "Zurück zu {{type}}",
+		"network": {
+			"title": "Keine Internetverbindung",
+			"description": "Bitte überprüfe deine Internetverbindung.",
+			"outageTitle": "Dienst nicht verfügbar",
+			"outageDescriptionOne": "{{service}} ist aktuell nicht verfügbar.",
+			"outageDescriptionMany": "{{services}} sind aktuell nicht verfügbar."
+		},
+		"guest": {
+			"title": "Anmeldung erforderlich",
+			"description": "Um diese Funktion zu nutzen, musst du dich mit deinem HAW Hamburg-Account anmelden.",
+			"button": "Anmelden"
+		},
+		"permission": {
+			"title": "Funktion nicht verfügbar",
+			"description": "Diese Funktion ist für deine Benutzergruppe nicht verfügbar."
+		},
+		"notLoggedIn": {
+			"title": "Nicht angemeldet",
+			"description": "Bitte melde dich an, um diese Funktion zu nutzen."
+		},
+		"noMeals": "Keine Gerichte verfügbar",
+		"crash": {
+			"title": "Interner Fehler",
+			"description": "Es ist ein unerwarteter interner Fehler aufgetreten.",
+			"reload": "App neu laden",
+			"feedback": "Feedback senden",
+			"status": "Systemstatus prüfen"
+		}
+	},
+	"dates": {
+		"allDay": "Ganztägig",
+		"today": "Heute",
+		"tomorrow": "Morgen",
+		"thisWeek": "Diese Woche",
+		"nextWeek": "Nächste Woche",
+		"endsIn": "endet {{time}}",
+		"now": "Jetzt"
+	},
+	"misc": {
+		"share": "Teilen",
+		"cancel": "Abbrechen",
+		"confirm": "Bestätigen",
+		"unknown": "Unbekannt"
+	},
+	"labels": {
+		"campus": "Campus"
+	},
+	"meta": {
+		"appDescription": "Deine Campus-App für die HAW Hamburg",
+		"dashboardTitle": "Startseite",
+		"dashboardDescription": "Anpassbares Dashboard",
+		"timetableDescription": "Deinen Stundenplan anzeigen",
+		"mapDescription": "Interaktive Campus-Karte",
+		"foodDescription": "Speiseplan der Mensen",
+		"settingsDescription": "Profil und Einstellungen"
+	},
+	"feedbackMail": {
+		"subjectCrash": "App-Absturz",
+		"subjectError": "App-Fehler",
+		"body": "Schritte zur Reproduktion:\nSonstiges:\n\nApp-Version: {{version}}\nPlattform: {{platform}}\nSeite: {{path}}\nFehler: {{error}}"
+	},
+	"quicklinks": {
+		"myhaw": "myHAW",
+		"moodle": "Moodle",
+		"webmail": "E-Mail",
+		"studVer": "AStA",
+		"viamint": "viaMINT",
+		"marketplace": "HAW-Shop",
+		"university": "HAW-Website",
+		"libraryCatalogue": "Bibliothekskatalog",
+		"onlineServices": "Online-Services",
+		"examCollection": "Klausurensammlung (IuE)"
+	},
+	"pages": {
+		"news": {
+			"noNews": {
+				"title": "Keine Neuigkeiten gefunden",
+				"subtitle": "Schau später wieder vorbei."
+			},
+			"loading": "Nachrichten werden geladen…",
+			"unavailable": "HAW-Nachrichten sind gerade nicht verfügbar.",
+			"position": "Artikel {{current}} von {{total}}",
+			"cached": "Zeige die zuletzt gespeicherten Nachrichten; die HAW Hamburg war nicht erreichbar.",
+			"photo": "Foto: © {{credit}}",
+			"more": "Alle Nachrichten auf haw-hamburg.de ↗"
+		},
+		"quicklinks": {
+			"title": "Quick Links",
+			"footer": "Die Karte auf der Startseite zeigt deine zuletzt genutzten Links.",
+			"links": {
+				"myhaw": "myHAW",
+				"moodle": "Moodle",
+				"webmail": "E-Mail",
+				"studVer": "AStA",
+				"viamint": "viaMINT",
+				"marketplace": "HAW-Shop",
+				"university": "HAW-Website",
+				"libraryCatalogue": "Bibliothekskatalog",
+				"onlineServices": "Online-Services",
+				"examCollection": "Klausurensammlung (IuE)"
+			},
+			"more": "Weitere Links"
+		},
+		"calendar": {
+			"events": {
+				"title": "Termine"
+			},
+			"calendar": {
+				"link": "https://www.haw-hamburg.de/semesterzeiten/",
+				"noData": {
+					"title": "Keine Daten gefunden",
+					"subtitle": "Bitte versuche es später erneut."
+				}
+			},
+			"footer": {
+				"part1": "Alle Informationen ohne Gewähr. Verbindliche Informationen sind direkt auf der ",
+				"part2": "Website der HAW Hamburg",
+				"part3": " verfügbar."
+			},
+			"academic": {
+				"scope": "Vorlesungs- und Prüfungstermine können je nach Department abweichen. Bitte den offiziellen Kalender prüfen.",
+				"unavailable": "Semesterzeiten sind derzeit nicht verfügbar.",
+				"empty": "Noch keine kommenden Semestertermine veröffentlicht.",
+				"stale": "Gespeicherte Termine. Änderungen findest du im offiziellen Kalender.",
+				"loading": "Termine werden geladen …"
+			},
+			"until": "bis {{date}}"
+		},
+		"event": {
+			"date": "Datum",
+			"time": "Uhrzeit",
+			"weekday": "Wochentag",
+			"location": "Ort",
+			"organizer": "Veranstalter",
+			"description": "Beschreibung",
+			"begin": "Beginn",
+			"end": "Ende",
+			"registration": "Anmeldung",
+			"required": "Erforderlich",
+			"contact": "Kontakt",
+			"optional": "Optional",
+			"invitationLink": "Einladungslink",
+			"eMail": "E-Mail",
+			"shareMessage": "Schau dir dieses Event an:\n{{title}} von {{organizer}} am {{date}}\n{{link}}",
+			"details": "Details",
+			"links": "Links",
+			"registerNow": "Jetzt anmelden",
+			"eventLink": "Website der Veranstaltung",
+			"organizerDetails": {
+				"clubWebsite": "Website des Clubs",
+				"instagram": "Instagram",
+				"linkedin": "LinkedIn",
+				"location": "Ort",
+				"registrationNumber": "Registrierungsnummer",
+				"nonProfit": {
+					"label": "Gemeinnützigkeit",
+					"yes": "Als gemeinnützig registriert",
+					"no": "Nicht als gemeinnützig registriert"
+				},
+				"info": "Standort",
+				"stats": "Rechtliches",
+				"noDescription": "Noch keine Beschreibung vorhanden.",
+				"tapHint": "Tippe auf den Veranstalter, um mehr über den Club zu erfahren."
+			},
+			"whenWhere": "Wann und wo",
+			"organizedBy": "Veranstaltet von",
+			"aboutEvent": "Über die Veranstaltung"
+		},
+		"map": {
+			"search": {
+				"hint": "Campus oder Adresse suchen…",
+				"placeholder": "Campus oder Adresse suchen",
+				"recent": "Kürzlich gesucht",
+				"clear": "Verlauf löschen",
+				"noResults": "Keine Suchergebnisse",
+				"results": "Suchergebnisse",
+				"fuzzy": "Vorschläge"
+			},
+			"allRoomsAvailable": {
+				"title": "Alle Räume frei",
+				"subtitle": "Aktuell sind alle Räume verfügbar."
+			},
+			"details": {
+				"room": {
+					"details": "Raumdetails",
+					"title": "Raum",
+					"building": "Gebäude",
+					"floor": "Etage",
+					"type": "Typ",
+					"history": "Zuletzt gesucht",
+					"signIn": "Melde dich an, um verfügbare Räume anzuzeigen",
+					"equipment": "Ausstattung",
+					"report": "Fehler melden"
+				},
+				"building": {
+					"total": "Räume insgesamt",
+					"floors": "Etagen"
+				},
+				"osm": "Kartendaten von OpenStreetMap"
+			},
+			"haw": {
+				"campuses": "Standorte der HAW Hamburg",
+				"directions": "Route planen",
+				"pdf": "Offizieller Lageplan",
+				"source": "Standortinformationen der HAW",
+				"locate": "Meinen Standort anzeigen",
+				"locationDenied": "Standortzugriff ist nicht verfügbar. Du kannst weiterhin einen Campus auswählen.",
+				"mapLoading": "Die Karte wird geladen. Campusinformationen sind unten bereits verfügbar.",
+				"mapUnavailable": "Die Hintergrundkarte ist nicht verfügbar. Campusdetails und offizielle Lagepläne sind unten weiterhin verfügbar.",
+				"retry": "Karte neu laden",
+				"buildingListing": "Im Gebäude",
+				"campusListing": "Am Standort"
+			}
+		},
+		"universityEvents": {
+			"departments": {
+				"title": "Abteilungen entdecken",
+				"viewAll": "Alle Abteilungen",
+				"filterAll": "Alle",
+				"departments": "Abteilungen",
+				"missingDescription": "Keine Beschreibung verfügbar.",
+				"footerInfo": "Die Abteilungen sind nach Aktivität und Vollständigkeit des Profils sortiert.",
+				"noOrganizers": {
+					"title": "Keine Abteilungen gefunden"
+				}
+			},
+			"events": {
+				"subtitle": "HAW Hamburg-Veranstaltungen",
+				"noEvents": {
+					"title": "Keine anstehenden Veranstaltungen",
+					"subtitle": "Bitte versuche es später erneut.",
+					"filteredSubtitle": "Keine Veranstaltungen von {{organizerName}} gefunden. Bitte versuche es später erneut."
+				}
+			}
+		},
+		"clEvents": {
+			"clubs": {
+				"title": "Clubs entdecken",
+				"viewAll": "Alle Clubs",
+				"filterAll": "Alle",
+				"clubs": "Clubs",
+				"missingDescription": "Keine Beschreibung verfügbar.",
+				"footerInfo": "Clubs sind nach aktueller Aktivität und Vollständigkeit des Profils sortiert.",
+				"noOrganizers": {
+					"title": "Noch keine Clubs eingetragen"
+				}
+			},
+			"events": {
+				"title": "Veranstaltungen",
+				"subtitle": "Anstehende Club-Veranstaltungen",
+				"noEvents": {
+					"title": "Keine anstehenden Club-Veranstaltungen",
+					"subtitle": "Clubs veröffentlichen ihre Veranstaltungen hier. Schau bald wieder vorbei.",
+					"filteredSubtitle": "{{clubName}} hat keine anstehenden Veranstaltungen."
+				}
+			},
+			"organizer": {
+				"subtitle": "Anstehende Veranstaltungen"
+			}
+		},
+		"events": {
+			"title": "Events"
+		},
+		"hawEvents": {
+			"club": "Club-Veranstaltung",
+			"source": "Veranstaltungen auf der HAW-Website",
+			"unavailable": "HAW-Veranstaltungen derzeit nicht verfügbar.",
+			"empty": "Keine kommenden Veranstaltungen veröffentlicht.",
+			"cached": "Gespeicherte Veranstaltungen. Aktuelle Angaben auf der HAW-Website prüfen.",
+			"open": "Veranstaltungsdetails öffnen",
+			"more": "Weitere Veranstaltungen auf der HAW-Website",
+			"loading": "Veranstaltungen werden geladen …",
+			"today": "Heute",
+			"tomorrow": "Morgen",
+			"allDay": "Ganztägig",
+			"until": "bis {{date}}"
+		},
+		"clubs": {
+			"title": "Clubs",
+			"subtitle": "Studentische Clubs und Initiativen an der HAW Hamburg",
+			"unavailable": "Clubs konnten nicht geladen werden.",
+			"empty": "Noch keine Clubs eingetragen",
+			"open": "Clubdetails anzeigen",
+			"cached": "Gespeicherte Clubs. Zum Aktualisieren nach unten ziehen.",
+			"notFound": "Dieser Club ist nicht mehr verfügbar.",
+			"image": "Bild des Clubs",
+			"emptyHint": "Clubs erscheinen hier, sobald sie eingetragen sind. Schau bald wieder vorbei.",
+			"website": "Website des Clubs"
+		},
+		"campusLifeEvents": {
+			"unavailable": "Campus-Life-Veranstaltungen konnten nicht geladen werden.",
+			"empty": "Keine anstehenden Campus-Life-Veranstaltungen.",
+			"cached": "Gespeicherte Veranstaltungen. Aktualisierung fehlgeschlagen."
+		}
+	}
+}

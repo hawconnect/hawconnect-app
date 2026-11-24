@@ -1,0 +1,53 @@
+{
+	"cli": {
+		"version": ">= 15.0.15",
+		"appVersionSource": "remote"
+	},
+	"build": {
+		"development": {
+			"developmentClient": true,
+			"distribution": "internal",
+			"bun": "1.4.1"
+		},
+		"preview": {
+			"distribution": "internal",
+			"bun": "1.4.1"
+		},
+		"staging": {
+			"autoIncrement": true,
+			"distribution": "store",
+			"environment": "preview",
+			"bun": "1.4.1",
+			"env": {
+				"APP_VARIANT": "staging"
+			}
+		},
+		"production": {
+			"autoIncrement": true,
+			"distribution": "store",
+			"environment": "production",
+			"bun": "1.4.1",
+			"env": {
+				"APP_VARIANT": "production"
+			}
+		},
+		"testflight": {
+			"extends": "production",
+			"environment": "preview",
+			"distribution": "store",
+			"developmentClient": false
+		}
+	},
+	"submit": {
+		"staging": {
+			"ios": {},
+			"android": {
+				"track": "internal",
+				"releaseStatus": "draft"
+			}
+		},
+		"testflight": {
+			"ios": {}
+		}
+	}
+}

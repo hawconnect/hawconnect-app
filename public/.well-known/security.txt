@@ -1,0 +1,5 @@
+Contact: mailto:contact@hawconnect.de
+Expires: 2027-10-24T23:59:59Z
+Preferred-Languages: en, de
+Canonical: https://app.hawconnect.de/.well-known/security.txt
+Policy: https://github.com/hawconnect/hawconnect-app/security/policy

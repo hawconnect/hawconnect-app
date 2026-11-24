@@ -1,0 +1,96 @@
+{
+	"navigation": {
+		"home": "Home",
+		"dashboardScreen": "Home",
+		"loginScreen": "Sign in to HAWConnect",
+		"changelog": "Changelog",
+		"eventDetails": "Event details",
+		"timetable": "Calendar",
+		"map": "Map",
+		"campusMap": "Campus map",
+		"food": "Food",
+		"settings": "Settings",
+		"preferences": "Preferences",
+		"timetableSettings": "Timetable settings",
+		"flags": "Flags",
+		"flagsSearch": "Search flags",
+		"allergensSearch": "Search allergens",
+		"allergens": "Allergens",
+		"details": "Details",
+		"profile": "Profile",
+		"about": "About",
+		"version": "Version details",
+		"calendar": "Semester dates",
+		"quicklinks": "Quick Links",
+		"organiser": "Organizer details",
+		"news": "HAW News",
+		"legal": "Legal",
+		"licenses": {
+			"title": "Licenses",
+			"search": "Search licenses"
+		},
+		"license": "License",
+		"login": "Sign in",
+		"dashboard": "HAWConnect",
+		"clEvents": "Campus Life",
+		"hawEvents": "HAW Events",
+		"calendarImport": "Calendar import",
+		"clubs": "Clubs",
+		"collapseSidebar": "Collapse sidebar",
+		"expandSidebar": "Expand sidebar",
+		"privacy": "Privacy Policy",
+		"imprint": "Imprint",
+		"marketplace": "Marketplace",
+		"marketplacePost": "Listing",
+		"marketplaceNew": "Create listing",
+		"marketplaceEdit": "Edit listing",
+		"marketplaceReport": "Report message",
+		"marketplaceMine": "My listings",
+		"cafeterias": "Cafés & mensas"
+	},
+	"cards": {
+		"titles": {
+			"timetable": "What's Next",
+			"calendar": "Semester dates",
+			"rooms": "Rooms",
+			"news": "HAW News",
+			"events": "Campus Life",
+			"hawEvents": "HAW Events",
+			"mensa": "Mensa",
+			"food": "Food",
+			"login": "What's Next",
+			"links": "Quick Links",
+			"clubs": "Clubs",
+			"marketplace": "Marketplace"
+		},
+		"announcements": {
+			"readMore": "Learn more"
+		},
+		"events": {
+			"by": "by {{name}}"
+		},
+		"calendar": {
+			"endsIn": "ends {{time}}"
+		},
+		"timetable": {
+			"ongoing": "ends at {{time}}",
+			"endingSoon_one": "ends in {{count}} min",
+			"endingSoon_other": "ends in {{count}} mins"
+		},
+		"importedClasses": {
+			"ongoing": "Ongoing class"
+		}
+	},
+	"contextMenu": {
+		"reset": "Reset cards",
+		"settings": "Home screen settings"
+	},
+	"unmatched": {
+		"title": "Not found",
+		"error": {
+			"title": "{{path}} not found",
+			"message": "The requested page is not available.",
+			"button": "Back"
+		}
+	}
+}
