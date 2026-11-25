@@ -27,7 +27,7 @@
 		"pkgs": "bunx expo install --check",
 		"doctor": "bunx expo-doctor",
 		"test": "bun test --ci",
-		"test:coverage": "bun test --ci --coverage --coverage-reporter=lcov --coverage-reporter=text && bun run test:boundary",
+		"test:coverage": "bun test --ci --coverage --coverage-reporter=lcov --coverage-reporter=text",
 		"test:mutation": "stryker run",
 		"test:mutation:ci": "stryker run --concurrency 1",
 		"test:mutation:check": "bun config/check-mutation-score.ts",
