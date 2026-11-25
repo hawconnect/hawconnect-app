@@ -56,13 +56,13 @@ const AnnouncementCard = ({
 	})
 
 	const handlePressIn = () => {
-		scale.value = withSpring(1.1, { damping: 10, stiffness: 100 })
-		rotation.value = withTiming(1, { duration: 150 })
+		scale.set(withSpring(1.1, { damping: 10, stiffness: 100 }))
+		rotation.set(withTiming(1, { duration: 150 }))
 	}
 
 	const handlePressOut = () => {
-		scale.value = withSpring(1, { damping: 10, stiffness: 100 })
-		rotation.value = withTiming(0, { duration: 150 })
+		scale.set(withSpring(1, { damping: 10, stiffness: 100 }))
+		rotation.set(withTiming(0, { duration: 150 }))
 	}
 
 	const filterAnnouncements = useCallback(

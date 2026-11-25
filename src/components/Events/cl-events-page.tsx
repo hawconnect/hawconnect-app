@@ -91,7 +91,9 @@ export default function ClEventsPage({
 	const clubsScrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null)
 	const skipClubScrollRef = useRef(true)
 	const selectedOrganizerIdRef = useRef(selectedOrganizerId)
-	selectedOrganizerIdRef.current = selectedOrganizerId
+	useEffect(() => {
+		selectedOrganizerIdRef.current = selectedOrganizerId
+	}, [selectedOrganizerId])
 
 	const organizersQuery = useQuery({
 		queryKey: [QUERY_KEYS.CAMPUS_LIFE_ORGANIZERS, organizerKind],

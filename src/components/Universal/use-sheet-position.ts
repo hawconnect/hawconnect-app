@@ -18,7 +18,7 @@ export function useSheetPosition(position: SharedValue<number>): {
 	>(
 		(event) => {
 			'worklet'
-			position.value = event.position
+			position.set(event.position)
 		},
 		['onPositionChange']
 	)

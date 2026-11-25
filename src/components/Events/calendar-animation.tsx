@@ -101,24 +101,28 @@ const FloatingEventIcon = ({
 			if (current === previous) return
 
 			const randomDelay = index * 80
-			floatY.value = withDelay(
-				randomDelay,
-				withSequence(
-					withTiming(-12, {
-						duration: 400,
-						easing: Easing.out(Easing.back(1.2))
-					}),
-					withTiming(0, { duration: 600, easing: Easing.bounce })
+			floatY.set(
+				withDelay(
+					randomDelay,
+					withSequence(
+						withTiming(-12, {
+							duration: 400,
+							easing: Easing.out(Easing.back(1.2))
+						}),
+						withTiming(0, { duration: 600, easing: Easing.bounce })
+					)
 				)
 			)
-			scale.value = withDelay(
-				randomDelay,
-				withSequence(
-					withTiming(1.2, {
-						duration: 200,
-						easing: Easing.out(Easing.back(1.5))
-					}),
-					withTiming(1, { duration: 400, easing: Easing.bounce })
+			scale.set(
+				withDelay(
+					randomDelay,
+					withSequence(
+						withTiming(1.2, {
+							duration: 200,
+							easing: Easing.out(Easing.back(1.5))
+						}),
+						withTiming(1, { duration: 400, easing: Easing.bounce })
+					)
 				)
 			)
 		}
@@ -129,52 +133,60 @@ const FloatingEventIcon = ({
 
 		const timeoutId = setTimeout(triggerSuperLightHaptic, delay)
 
-		opacity.value = withDelay(
-			delay,
-			withTiming(1, {
-				duration: 800,
-				easing: Easing.out(Easing.cubic)
-			})
-		)
-		scale.value = withDelay(
-			delay,
-			withTiming(1, {
-				duration: 800,
-				easing: Easing.out(Easing.back(1.5))
-			})
-		)
-		floatY.value = withDelay(
-			delay,
-			withRepeat(
-				withSequence(
-					withTiming(4, {
-						duration: 3000 + Math.random() * 1000,
-						easing: Easing.inOut(Easing.sin)
-					}),
-					withTiming(-4, {
-						duration: 3000 + Math.random() * 1000,
-						easing: Easing.inOut(Easing.sin)
-					})
-				),
-				-1,
-				true
+		opacity.set(
+			withDelay(
+				delay,
+				withTiming(1, {
+					duration: 800,
+					easing: Easing.out(Easing.cubic)
+				})
 			)
 		)
-		rotation.value = withDelay(
-			delay,
-			withRepeat(
-				withSequence(
-					withTiming(0.025, {
-						duration: 4000 + Math.random() * 1000,
-						easing: Easing.inOut(Easing.sin)
-					}),
-					withTiming(-0.025, {
-						duration: 4000 + Math.random() * 1000,
-						easing: Easing.inOut(Easing.sin)
-					})
-				),
-				-1,
-				true
+		scale.set(
+			withDelay(
+				delay,
+				withTiming(1, {
+					duration: 800,
+					easing: Easing.out(Easing.back(1.5))
+				})
+			)
+		)
+		floatY.set(
+			withDelay(
+				delay,
+				withRepeat(
+					withSequence(
+						withTiming(4, {
+							duration: 3000 + Math.random() * 1000,
+							easing: Easing.inOut(Easing.sin)
+						}),
+						withTiming(-4, {
+							duration: 3000 + Math.random() * 1000,
+							easing: Easing.inOut(Easing.sin)
+						})
+					),
+					-1,
+					true
+				)
+			)
+		)
+		rotation.set(
+			withDelay(
+				delay,
+				withRepeat(
+					withSequence(
+						withTiming(0.025, {
+							duration: 4000 + Math.random() * 1000,
+							easing: Easing.inOut(Easing.sin)
+						}),
+						withTiming(-0.025, {
+							duration: 4000 + Math.random() * 1000,
+							easing: Easing.inOut(Easing.sin)
+						})
+					),
+					-1,
+					true
+				)
 			)
 		)
 
@@ -228,34 +240,48 @@ export const CalendarAnimation = ({
 	const tapGesture = Gesture.Tap().onBegin(() => {
 		runOnJS(triggerCalendarAnimationHaptic)()
 
-		calendarTapScale.value = withSequence(
-			withTiming(0.95, { duration: 100, easing: Easing.out(Easing.quad) }),
-			withTiming(1, { duration: 200, easing: Easing.bounce })
+		calendarTapScale.set(
+			withSequence(
+				withTiming(0.95, { duration: 100, easing: Easing.out(Easing.quad) }),
+				withTiming(1, { duration: 200, easing: Easing.bounce })
+			)
 		)
 
-		tapCount.value = tapCount.value + 1
+		tapCount.set(tapCount.value + 1)
 	})
 
 	useEffect(() => {
-		calendarOpacity.value = withTiming(1, {
-			duration: 800,
-			easing: Easing.out(Easing.quad)
-		})
-		calendarScale.value = withRepeat(
-			withSequence(
-				withTiming(1, { duration: 2200, easing: Easing.inOut(Easing.sin) }),
-				withTiming(0.97, { duration: 2200, easing: Easing.inOut(Easing.sin) })
-			),
-			-1,
-			true
+		calendarOpacity.set(
+			withTiming(1, {
+				duration: 800,
+				easing: Easing.out(Easing.quad)
+			})
 		)
-		calendarRotation.value = withRepeat(
-			withSequence(
-				withTiming(0.05, { duration: 3000, easing: Easing.inOut(Easing.sin) }),
-				withTiming(-0.05, { duration: 3000, easing: Easing.inOut(Easing.sin) })
-			),
-			-1,
-			true
+		calendarScale.set(
+			withRepeat(
+				withSequence(
+					withTiming(1, { duration: 2200, easing: Easing.inOut(Easing.sin) }),
+					withTiming(0.97, { duration: 2200, easing: Easing.inOut(Easing.sin) })
+				),
+				-1,
+				true
+			)
+		)
+		calendarRotation.set(
+			withRepeat(
+				withSequence(
+					withTiming(0.05, {
+						duration: 3000,
+						easing: Easing.inOut(Easing.sin)
+					}),
+					withTiming(-0.05, {
+						duration: 3000,
+						easing: Easing.inOut(Easing.sin)
+					})
+				),
+				-1,
+				true
+			)
 		)
 	}, [])
 

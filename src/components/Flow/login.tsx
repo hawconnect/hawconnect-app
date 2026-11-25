@@ -24,9 +24,12 @@ const useIsFloatingKeyboard = (): boolean => {
 			setFloating(event.endCoordinates.width !== windowWidth)
 		}
 
-		Keyboard.addListener('keyboardWillChangeFrame', onKeyboardWillChangeFrame)
+		const subscription = Keyboard.addListener(
+			'keyboardWillChangeFrame',
+			onKeyboardWillChangeFrame
+		)
 		return () => {
-			Keyboard.removeAllListeners('keyboardWillChangeFrame')
+			subscription.remove()
 		}
 	}, [windowWidth])
 

@@ -35,30 +35,44 @@ export default function About(): React.JSX.Element {
 
 	useEffect(() => {
 		const animate = () => {
-			shimmerOpacity.value = 0
-			shimmerPosition.value = -100
-			shimmerScale.value = 1
-			shimmerRotation.value = 0
+			shimmerOpacity.set(0)
+			shimmerPosition.set(-100)
+			shimmerScale.set(1)
+			shimmerRotation.set(0)
 
-			shimmerOpacity.value = withSequence(
-				withTiming(0.6, { duration: 1200, easing: Easing.inOut(Easing.ease) }),
-				withTiming(0, { duration: 1200, easing: Easing.inOut(Easing.ease) })
+			shimmerOpacity.set(
+				withSequence(
+					withTiming(0.6, {
+						duration: 1200,
+						easing: Easing.inOut(Easing.ease)
+					}),
+					withTiming(0, { duration: 1200, easing: Easing.inOut(Easing.ease) })
+				)
 			)
 
-			shimmerPosition.value = withTiming(200, {
-				duration: 2400,
-				easing: Easing.inOut(Easing.ease)
-			})
-
-			shimmerScale.value = withSequence(
-				withTiming(1.1, { duration: 1200, easing: Easing.inOut(Easing.ease) }),
-				withTiming(1, { duration: 1200, easing: Easing.inOut(Easing.ease) })
+			shimmerPosition.set(
+				withTiming(200, {
+					duration: 2400,
+					easing: Easing.inOut(Easing.ease)
+				})
 			)
 
-			shimmerRotation.value = withTiming(25, {
-				duration: 2400,
-				easing: Easing.inOut(Easing.ease)
-			})
+			shimmerScale.set(
+				withSequence(
+					withTiming(1.1, {
+						duration: 1200,
+						easing: Easing.inOut(Easing.ease)
+					}),
+					withTiming(1, { duration: 1200, easing: Easing.inOut(Easing.ease) })
+				)
+			)
+
+			shimmerRotation.set(
+				withTiming(25, {
+					duration: 2400,
+					easing: Easing.inOut(Easing.ease)
+				})
+			)
 		}
 
 		animate()

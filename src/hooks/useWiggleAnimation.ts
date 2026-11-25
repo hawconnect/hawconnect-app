@@ -22,20 +22,26 @@ export const useWiggleAnimation = (
 
 	const triggerWiggle = async () => {
 		await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
-		iconRotation.value = withSpring(-options.rotation, {
-			damping: options.damping,
-			stiffness: options.stiffness
-		})
-		setTimeout(() => {
-			iconRotation.value = withSpring(options.rotation, {
+		iconRotation.set(
+			withSpring(-options.rotation, {
 				damping: options.damping,
 				stiffness: options.stiffness
 			})
-			setTimeout(() => {
-				iconRotation.value = withSpring(0, {
+		)
+		setTimeout(() => {
+			iconRotation.set(
+				withSpring(options.rotation, {
 					damping: options.damping,
 					stiffness: options.stiffness
 				})
+			)
+			setTimeout(() => {
+				iconRotation.set(
+					withSpring(0, {
+						damping: options.damping,
+						stiffness: options.stiffness
+					})
+				)
 			}, 100)
 		}, 100)
 	}

@@ -35,7 +35,9 @@ export function useUniversalLinkHandler(): void {
 	const rootNavigationState = useRootNavigationState()
 	const pathname = usePathname()
 	const pathnameRef = useRef(pathname)
-	pathnameRef.current = pathname
+	useEffect(() => {
+		pathnameRef.current = pathname
+	}, [pathname])
 	const navigationReady = rootNavigationState?.key != null
 
 	useEffect(() => {

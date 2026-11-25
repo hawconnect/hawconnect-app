@@ -34,31 +34,42 @@ export const useSharedPlateAnimations = ({
 	const tapCount = useSharedValue(0)
 
 	useEffect(() => {
-		plateOpacity.value = withTiming(1, {
-			duration: 1000,
-			easing: Easing.out(Easing.quad)
-		})
-		plateScale.value = withTiming(1, {
-			duration: 1000,
-			easing: Easing.out(Easing.quad)
-		})
-
-		plateLift.value = withRepeat(
-			withSequence(
-				withTiming(-2, { duration: 3000, easing: Easing.inOut(Easing.sin) }),
-				withTiming(2, { duration: 3000, easing: Easing.inOut(Easing.sin) })
-			),
-			-1,
-			true
+		plateOpacity.set(
+			withTiming(1, {
+				duration: 1000,
+				easing: Easing.out(Easing.quad)
+			})
+		)
+		plateScale.set(
+			withTiming(1, {
+				duration: 1000,
+				easing: Easing.out(Easing.quad)
+			})
 		)
 
-		plateGlowIntensity.value = withRepeat(
-			withSequence(
-				withTiming(0.5, { duration: 2000, easing: Easing.inOut(Easing.quad) }),
-				withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.quad) })
-			),
-			-1,
-			true
+		plateLift.set(
+			withRepeat(
+				withSequence(
+					withTiming(-2, { duration: 3000, easing: Easing.inOut(Easing.sin) }),
+					withTiming(2, { duration: 3000, easing: Easing.inOut(Easing.sin) })
+				),
+				-1,
+				true
+			)
+		)
+
+		plateGlowIntensity.set(
+			withRepeat(
+				withSequence(
+					withTiming(0.5, {
+						duration: 2000,
+						easing: Easing.inOut(Easing.quad)
+					}),
+					withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.quad) })
+				),
+				-1,
+				true
+			)
 		)
 	}, [])
 
@@ -105,37 +116,45 @@ export const useSharedPlateAnimations = ({
 
 		runOnJS(Haptics.impactAsync)(Haptics.ImpactFeedbackStyle.Light)
 
-		isAnimatingTap.value = true
-		platePressPulse.value = withSequence(
-			withTiming(1, { duration: 150, easing: Easing.out(Easing.quad) }),
-			withTiming(0, { duration: 400, easing: Easing.out(Easing.quad) })
-		)
-
-		plateRotation.value = withSequence(
-			withTiming(-0.03, { duration: 200, easing: Easing.inOut(Easing.quad) }),
-			withTiming(0.03, { duration: 400, easing: Easing.inOut(Easing.quad) }),
-			withTiming(
-				0,
-				{ duration: 300, easing: Easing.inOut(Easing.quad) },
-				(finished) => {
-					if (finished) {
-						isAnimatingTap.value = false
-					}
-				}
+		isAnimatingTap.set(true)
+		platePressPulse.set(
+			withSequence(
+				withTiming(1, { duration: 150, easing: Easing.out(Easing.quad) }),
+				withTiming(0, { duration: 400, easing: Easing.out(Easing.quad) })
 			)
 		)
 
-		plateGlowIntensity.value = withSequence(
-			withTiming(1.5, { duration: 150, easing: Easing.out(Easing.quad) }),
-			withTiming(0.3, { duration: 800, easing: Easing.out(Easing.quad) })
+		plateRotation.set(
+			withSequence(
+				withTiming(-0.03, { duration: 200, easing: Easing.inOut(Easing.quad) }),
+				withTiming(0.03, { duration: 400, easing: Easing.inOut(Easing.quad) }),
+				withTiming(
+					0,
+					{ duration: 300, easing: Easing.inOut(Easing.quad) },
+					(finished) => {
+						if (finished) {
+							isAnimatingTap.set(false)
+						}
+					}
+				)
+			)
 		)
 
-		innerPlateColorIntensity.value = withSequence(
-			withTiming(1, { duration: 150, easing: Easing.out(Easing.quad) }),
-			withTiming(0, { duration: 800, easing: Easing.out(Easing.quad) })
+		plateGlowIntensity.set(
+			withSequence(
+				withTiming(1.5, { duration: 150, easing: Easing.out(Easing.quad) }),
+				withTiming(0.3, { duration: 800, easing: Easing.out(Easing.quad) })
+			)
 		)
 
-		tapCount.value = tapCount.value + 1
+		innerPlateColorIntensity.set(
+			withSequence(
+				withTiming(1, { duration: 150, easing: Easing.out(Easing.quad) }),
+				withTiming(0, { duration: 800, easing: Easing.out(Easing.quad) })
+			)
+		)
+
+		tapCount.set(tapCount.value + 1)
 	}
 
 	return {

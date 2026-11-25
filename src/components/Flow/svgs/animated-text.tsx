@@ -34,16 +34,18 @@ const AnimatedText = ({
 
 	useEffect(() => {
 		if (!disabled) {
-			colorValue.value = withRepeat(
-				withTiming(1, {
-					duration: speed,
-					easing: Easing.linear
-				}),
-				-1,
-				true
+			colorValue.set(
+				withRepeat(
+					withTiming(1, {
+						duration: speed,
+						easing: Easing.linear
+					}),
+					-1,
+					true
+				)
 			)
 		} else {
-			colorValue.value = 0
+			colorValue.set(0)
 		}
 	}, [colorValue, speed, disabled])
 

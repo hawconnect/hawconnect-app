@@ -54,13 +54,13 @@ const BaseCard = ({
 	})
 
 	const handlePressIn = () => {
-		scale.value = withSpring(1.15, { damping: 10, stiffness: 100 })
-		rotation.value = withTiming(1, { duration: 150 })
+		scale.set(withSpring(1.15, { damping: 10, stiffness: 100 }))
+		rotation.set(withTiming(1, { duration: 150 }))
 	}
 
 	const handlePressOut = () => {
-		scale.value = withSpring(1, { damping: 10, stiffness: 100 })
-		rotation.value = withTiming(0, { duration: 300 })
+		scale.set(withSpring(1, { damping: 10, stiffness: 100 }))
+		rotation.set(withTiming(0, { duration: 300 }))
 	}
 
 	const { resetOrder } = use(DashboardContext)

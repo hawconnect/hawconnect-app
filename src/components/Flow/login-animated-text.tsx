@@ -43,14 +43,16 @@ function LoginAnimatedText(): React.JSX.Element {
 	}, [texts])
 
 	const goToNextText = (): void => {
-		textOpacity.value = withTiming(0, { duration: 300 }, () => {
-			const nextIndex = (currentTextIndexRef.current + 1) % texts.length
-			runOnJS(setCurrentTextIndex)(nextIndex)
+		textOpacity.set(
+			withTiming(0, { duration: 300 }, () => {
+				const nextIndex = (currentTextIndexRef.current + 1) % texts.length
+				runOnJS(setCurrentTextIndex)(nextIndex)
 
-			textTranslateY.value = 5
-			textOpacity.value = withTiming(1, { duration: 300 })
-			textTranslateY.value = withTiming(0, { duration: 600 })
-		})
+				textTranslateY.set(5)
+				textOpacity.set(withTiming(1, { duration: 300 }))
+				textTranslateY.set(withTiming(0, { duration: 600 }))
+			})
+		)
 	}
 
 	useEffect(() => {

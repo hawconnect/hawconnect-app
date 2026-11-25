@@ -22,7 +22,7 @@ export function useSheetDetailScroll() {
 	const scrollOffset = useSharedValue(-topInset)
 	const scrollHandler = useAnimatedScrollHandler({
 		onScroll: (event) => {
-			scrollOffset.value = event.contentOffset.y
+			scrollOffset.set(event.contentOffset.y)
 		}
 	})
 

@@ -235,11 +235,13 @@ const TimetablePreview = ({
 	useEffect(() => {
 		if (mode !== prevMode) {
 			setVisibleMode(mode)
-			animationProgress.value = 0
-			animationProgress.value = withTiming(1, {
-				duration: 300,
-				easing: Easing.ease
-			})
+			animationProgress.set(0)
+			animationProgress.set(
+				withTiming(1, {
+					duration: 300,
+					easing: Easing.ease
+				})
+			)
 			setPrevMode(mode)
 		}
 	}, [mode, animationProgress, prevMode])

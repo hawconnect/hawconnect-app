@@ -41,9 +41,11 @@ export const FloatingFoodIcon = ({
 			if (previous === undefined) return
 			if (current === previous) return
 
-			floatY.value = withSequence(
-				withTiming(-5, { duration: 200, easing: Easing.out(Easing.quad) }),
-				withTiming(0, { duration: 400, easing: Easing.out(Easing.quad) })
+			floatY.set(
+				withSequence(
+					withTiming(-5, { duration: 200, easing: Easing.out(Easing.quad) }),
+					withTiming(0, { duration: 400, easing: Easing.out(Easing.quad) })
+				)
 			)
 		}
 	)
@@ -51,29 +53,43 @@ export const FloatingFoodIcon = ({
 	useEffect(() => {
 		const delay = foodIcon.delay
 
-		opacity.value = withDelay(
-			delay,
-			withTiming(1, { duration: 800, easing: Easing.out(Easing.quad) })
+		opacity.set(
+			withDelay(
+				delay,
+				withTiming(1, { duration: 800, easing: Easing.out(Easing.quad) })
+			)
 		)
-		scale.value = withDelay(
-			delay,
-			withTiming(1, { duration: 800, easing: Easing.out(Easing.quad) })
+		scale.set(
+			withDelay(
+				delay,
+				withTiming(1, { duration: 800, easing: Easing.out(Easing.quad) })
+			)
 		)
-		floatY.value = withRepeat(
-			withSequence(
-				withTiming(-3, { duration: 3000, easing: Easing.inOut(Easing.sin) }),
-				withTiming(3, { duration: 3000, easing: Easing.inOut(Easing.sin) })
-			),
-			-1,
-			true
+		floatY.set(
+			withRepeat(
+				withSequence(
+					withTiming(-3, { duration: 3000, easing: Easing.inOut(Easing.sin) }),
+					withTiming(3, { duration: 3000, easing: Easing.inOut(Easing.sin) })
+				),
+				-1,
+				true
+			)
 		)
-		rotation.value = withRepeat(
-			withSequence(
-				withTiming(0.025, { duration: 4000, easing: Easing.inOut(Easing.sin) }),
-				withTiming(-0.025, { duration: 4000, easing: Easing.inOut(Easing.sin) })
-			),
-			-1,
-			true
+		rotation.set(
+			withRepeat(
+				withSequence(
+					withTiming(0.025, {
+						duration: 4000,
+						easing: Easing.inOut(Easing.sin)
+					}),
+					withTiming(-0.025, {
+						duration: 4000,
+						easing: Easing.inOut(Easing.sin)
+					})
+				),
+				-1,
+				true
+			)
 		)
 	}, [foodIcon.delay])
 

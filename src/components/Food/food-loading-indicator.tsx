@@ -37,17 +37,7 @@ export const FoodLoadingIndicator = ({
 	const dot3Opacity = useSharedValue(0.6)
 
 	useEffect(() => {
-		dot1Opacity.value = withRepeat(
-			withSequence(
-				withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
-				withTiming(0.3, { duration: 800, easing: Easing.inOut(Easing.quad) })
-			),
-			-1,
-			true
-		)
-
-		dot2Opacity.value = withDelay(
-			200,
+		dot1Opacity.set(
 			withRepeat(
 				withSequence(
 					withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
@@ -58,15 +48,37 @@ export const FoodLoadingIndicator = ({
 			)
 		)
 
-		dot3Opacity.value = withDelay(
-			400,
-			withRepeat(
-				withSequence(
-					withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
-					withTiming(0.3, { duration: 800, easing: Easing.inOut(Easing.quad) })
-				),
-				-1,
-				true
+		dot2Opacity.set(
+			withDelay(
+				200,
+				withRepeat(
+					withSequence(
+						withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
+						withTiming(0.3, {
+							duration: 800,
+							easing: Easing.inOut(Easing.quad)
+						})
+					),
+					-1,
+					true
+				)
+			)
+		)
+
+		dot3Opacity.set(
+			withDelay(
+				400,
+				withRepeat(
+					withSequence(
+						withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
+						withTiming(0.3, {
+							duration: 800,
+							easing: Easing.inOut(Easing.quad)
+						})
+					),
+					-1,
+					true
+				)
 			)
 		)
 	}, [])

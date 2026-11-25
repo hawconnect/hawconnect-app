@@ -16,6 +16,16 @@ export function PhotoGallery({
 	const { t } = useTranslation('marketplace')
 	const [width, setWidth] = useState(0)
 	const [index, setIndex] = useState(0)
+	// Web has no momentum events, so onScroll also tracks the page; update
+	// state only when the page changes, not on every scroll event.
+	const updateIndex = (offsetX: number) => {
+		if (width <= 0) return
+		const next = Math.max(
+			0,
+			Math.min(urls.length - 1, Math.round(offsetX / width))
+		)
+		if (next !== index) setIndex(next)
+	}
 	return (
 		<View
 			className="w-full aspect-[4/3] ios:rounded-ios android:rounded-md web:rounded-md overflow-hidden bg-card-contrast"
@@ -25,14 +35,10 @@ export function PhotoGallery({
 				horizontal
 				pagingEnabled
 				showsHorizontalScrollIndicator={false}
-				onMomentumScrollEnd={(event) => {
-					if (width > 0)
-						setIndex(Math.round(event.nativeEvent.contentOffset.x / width))
-				}}
-				onScroll={(event) => {
-					if (width > 0)
-						setIndex(Math.round(event.nativeEvent.contentOffset.x / width))
-				}}
+				onMomentumScrollEnd={(event) =>
+					updateIndex(event.nativeEvent.contentOffset.x)
+				}
+				onScroll={(event) => updateIndex(event.nativeEvent.contentOffset.x)}
 				scrollEventThrottle={100}
 			>
 				{urls.map((url, i) => (
