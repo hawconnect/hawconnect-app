@@ -4,6 +4,9 @@ import { storageMock } from './storage-mocks'
 
 const SRC_ROOT = new URL('../../', import.meta.url).pathname
 
+// React Native's global; expo reads it when its modules load (false skips dev-only HMR setup).
+;(globalThis as { __DEV__?: boolean }).__DEV__ ??= false
+
 mockReactNative()
 
 // Register shared mocks first so sticky Bun mock.module always has complete exports.

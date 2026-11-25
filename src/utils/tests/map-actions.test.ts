@@ -9,6 +9,11 @@ mock.module('expo-router', () => ({
 		push: pushMock
 	}
 }))
+// Native modules map-actions pulls in through ui-utils; without these the file
+// only passes when an earlier test file happened to register them.
+mock.module('@aptabase/react-native', () => ({ trackEvent: () => {} }))
+mock.module('burnt', () => ({ toast: () => {} }))
+mock.module('expo-clipboard', () => ({ setStringAsync: async () => {} }))
 
 let mapActions: typeof import('../map-actions')
 

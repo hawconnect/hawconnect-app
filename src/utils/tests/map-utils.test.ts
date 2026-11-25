@@ -35,6 +35,12 @@ mock.module('i18next', () => ({
 	t: (key: string) => key
 }))
 
+// map-utils re-exports from map-actions, which imports expo-router; the real
+// package cannot load under Bun (it imports PNG assets).
+mock.module('expo-router', () => ({
+	router: { dismissAll: () => {}, push: () => {} }
+}))
+
 let mapUtils: typeof import('../map-utils')
 
 beforeAll(async () => {
