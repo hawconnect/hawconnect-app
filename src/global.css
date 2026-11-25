@@ -51,10 +51,12 @@
 }
 
 /* react-native-web sets a system `font` shorthand on every Text/TextInput;
-   unlayered so it wins over RNW's layer. Native uses Outfit-* faces via the
-   uniwind Text/TextInput patch (patches/uniwind@1.13.0.patch). */
-[class*="css-text-"],
-[class*="css-textinput-"],
+   unlayered so it wins over RNW's layer. Its class names are `css-text-…` in
+   development but only `css-…` in production builds, so match the prefix.
+   Native uses Outfit-* faces via the uniwind Text/TextInput patch
+   (patches/uniwind@1.13.0.patch). */
+[class^="css-"],
+[class*=" css-"],
 input,
 textarea,
 button {
